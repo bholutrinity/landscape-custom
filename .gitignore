@@ -1,0 +1,16 @@
+node_modules/
+dist/css/main.css
+dist/css/main.css.map
+dist/js/
+.DS_Store
+.env
+.env.local
+*.log
+.sass-cache/
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.classpath

@@ -1,0 +1,92 @@
+@use "../../base/variables" as *;
+@use "../../base/mixins" as *;
+
+.ls-section-title {
+  font-size: clamp(1.25rem, 1rem + 1.25vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: #222;
+  @media (max-width: 767.98px) {
+    font-size: 1.5rem;
+  }
+}
+.ls-section-label {
+  font-size: 1rem;
+  color: #8ca05a;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin-bottom: 0px;
+}
+.ls-section-desc {
+  font-size: 1.1rem;
+  color: #555;
+  margin: 0;
+}
+
+.ls-latest-blog {
+  background: #fff;
+  .ls-blog-card {
+    border-radius: 14px;
+    overflow: hidden;
+    transition:
+      transform 0.3s cubic-bezier(0.4, 2, 0.6, 1),
+      box-shadow 0.3s cubic-bezier(0.4, 2, 0.6, 1);
+    &:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 8px 24px rgba(140, 160, 90, 0.15);
+    }
+    .card-img-top {
+      height: 290px;
+      object-fit: cover;
+      @media (max-width: 767.98px) {
+        height: 160px;
+      }
+    }
+    .card-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #222;
+    }
+    .card-text {
+      font-size: 1rem;
+      color: #666;
+    }
+    .ls-learn-more {
+      font-size: 1rem;
+      color: #8ca05a;
+      transition: color 0.2s;
+      &:hover {
+        color: #6d7c3c;
+        text-decoration: underline;
+      }
+    }
+  }
+  .ls-view-all {
+    font-size: 1rem;
+    color: #8ca05a;
+    &:hover {
+      text-decoration: underline;
+      color: #6d7c3c;
+    }
+  }
+}
+
+/* Owl Carousel overrides for smooth fade/slide */
+.owl-carousel .owl-item {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.owl-carousel .owl-item.active {
+  opacity: 1;
+}
+.owl-carousel .owl-dots .owl-dot span {
+  background: #eaf3e2;
+  width: 12px;
+  height: 12px;
+  margin: 0 4px;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+.owl-carousel .owl-dots .owl-dot.active span {
+  background: #8ca05a;
+}

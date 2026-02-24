@@ -1,0 +1,24 @@
+{
+  "name": "landscape-website",
+  "version": "1.0.0",
+  "description": "Professional Bootstrap 5 + SCSS website project",
+  "main": "dist/js/main.js",
+  "scripts": {
+    "sass": "sass --watch src/scss:dist/css",
+    "sass:build": "sass src/scss:dist/css --style=compressed",
+    "dev": "sass --watch src/scss:dist/css",
+    "build": "sass src/scss/main.scss dist/css/main.css --style=compressed"
+  },
+  "keywords": [
+    "bootstrap",
+    "scss",
+    "sass",
+    "responsive",
+    "website"
+  ],
+  "author": "Your Company",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.69.5"
+  }
+}

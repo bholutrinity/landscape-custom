@@ -1,0 +1,91 @@
+// ==========================================================================
+// Reset & Normalize
+// ==========================================================================
+// Base reset styles leveraging Bootstrap's normalization.
+@use "../base/variables" as *;
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $body-color;
+  background-color: $body-bg;
+}
+
+// Remove default margins on common elements
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl,
+blockquote,
+figure {
+  margin-bottom: $space-md;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Image Defaults
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+// Link Defaults
+a {
+  color: $primary;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// Form Inputs
+input,
+textarea,
+select,
+button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+// Table Defaults
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+// Abbreviation
+abbr[title] {
+  cursor: help;
+  text-decoration: underline dotted;
+}
+
+// Code Elements
+code,
+kbd,
+pre,
+samp {
+  font-family: $font-family-mono;
+  font-size: 0.875em;
+}
+
+pre {
+  overflow-x: auto;
+  background-color: $light;
+  padding: $space-md;
+  border-radius: $border-radius-base;
+}

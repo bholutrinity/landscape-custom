@@ -1,0 +1,162 @@
+// ==========================================================================
+// Modal Components
+// ==========================================================================
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
+.modal {
+  display: none;
+  position: fixed;
+  z-index: $z-index-modal;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba($black, 0);
+  @include transition(background-color);
+
+  &.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba($black, 0.5);
+  }
+}
+
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: $space-lg;
+  max-width: 500px;
+
+  @include breakpoint(sm) {
+    margin: $space-xl auto;
+  }
+}
+
+.modal-dialog.modal-lg {
+  max-width: 800px;
+}
+
+.modal-dialog.modal-sm {
+  max-width: 300px;
+}
+
+.modal-dialog.modal-fullscreen {
+  max-width: none;
+  margin: 0;
+  width: 100%;
+
+  .modal-content {
+    height: 100vh;
+    border-radius: 0;
+  }
+}
+
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: $white;
+  border-radius: $border-radius-lg;
+  box-shadow: $shadow-xl;
+  border: none;
+}
+
+.modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: $space-lg;
+  border-bottom: 1px solid $border-color;
+
+  .modal-title {
+    margin: 0;
+    font-size: $font-size-xl;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-base;
+  }
+
+  .btn-close {
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    opacity: 0.5;
+    @include transition;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:focus {
+      opacity: 1;
+      box-shadow: 0 0 0 0.25rem rgba($primary, 0.25);
+      outline: 0;
+    }
+  }
+}
+
+.modal-body {
+  position: relative;
+  flex: 1 1 auto;
+  padding: $space-lg;
+  overflow-y: auto;
+}
+
+.modal-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  padding: $space-md $space-lg;
+  border-top: 1px solid $border-color;
+  gap: $space-sm;
+
+  .btn {
+    margin-bottom: 0;
+  }
+}
+
+// Modal Backdrop
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $z-index-modal-backdrop;
+  width: 100vw;
+  height: 100vh;
+  background-color: $black;
+
+  &.fade {
+    opacity: 0;
+    @include transition(opacity);
+  }
+
+  &.show {
+    opacity: 0.5;
+  }
+}
+
+// Alert Modal
+.modal-alert {
+  .modal-header {
+    background-color: $light;
+  }
+}
+
+.modal-alert-warning .modal-header {
+  background-color: rgba($warning, 0.1);
+  border-bottom-color: $warning;
+}
+
+.modal-alert-danger .modal-header {
+  background-color: rgba($danger, 0.1);
+  border-bottom-color: $danger;
+}
+
+.modal-alert-success .modal-header {
+  background-color: rgba($success, 0.1);
+  border-bottom-color: $success;
+}

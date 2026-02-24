@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your website description">
+    <meta name="keywords" content="your, keywords">
+    <meta name="author" content="Your Company">
+    <meta property="og:title" content="Your Website">
+    <meta property="og:description" content="Your website description">
+    <meta property="og:type" content="website">
+
+    <title>Home | Your Website</title>
+
+    <!-- Bootstrap 5 CSS via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Custom Compiled CSS -->
+    <link rel="stylesheet" href="../scss/main.css">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+</head>
+
+<body>
+    <!-- Header Navigation -->
+    <header class="main-header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+
+                <!-- Logo -->
+                <a class="navbar-brand logo" href="#">Landscape</a>
+
+                <!-- Mobile Toggle -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                    aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navbar Content -->
+                <div class="collapse navbar-collapse justify-content-between" id="mainNavbar">
+
+                    <!-- Center Menu -->
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About Us</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Shop</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="gardenDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Garden Supplies
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Plants</a></li>
+                                <li><a class="dropdown-item" href="#">Tools</a></li>
+                                <li><a class="dropdown-item" href="#">Fertilizers</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Blog</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact Us</a>
+                        </li>
+                    </ul>
+
+                    <!-- Right Icons -->
+                    <div class="header-icons d-flex align-items-center">
+                        <a href="#" class="icon-btn" aria-label="Search">
+                            <i class="bi bi-search"></i>
+                        </a>
+
+                        <a href="#" class="icon-btn" aria-label="Wishlist">
+                            <i class="bi bi-heart"></i>
+                        </a>
+
+                        <a href="#" class="icon-btn" aria-label="Cart">
+                            <i class="bi bi-bag"></i>
+                        </a>
+
+                        <a href="#" class="icon-btn" aria-label="Profile">
+                            <i class="bi bi-person"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <section class="hero">
+            <div class="hero__overlay"></div>
+
+            <div class="hero__content">
+                <span class="hero__since">Since 2005</span>
+
+                <h1 class="hero__title">
+                    Your <span>Landscape</span>, Our<br>Expertise
+                </h1>
+
+                <p class="hero__text">
+                    Premium mulch, sand, soil & stone supplies — delivered with care.
+                    Transform your outdoor space with quality materials from trusted
+                    local experts.
+                </p>
+
+                <div class="hero__buttons">
+                    <a href="#" class="btn btn--primary">Contact Us</a>
+                    <a href="#" class="btn btn--secondary">View Product</a>
+                </div>
+            </div>
+        </section>
+        <section class="gs-section">
+            <div class="gs-wave-art"></div>
+
+
+            <div class="container">
+                <div class="gs-info-row">
+                    <div class="row gs-info-carousel">
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="gs-info-card">
+                                <div class="gs-info-card-icon">
+                                    <svg width="45" height="45" viewBox="0 0 45 45" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M6.14224e-09 9.84375C6.14224e-09 8.72487 0.444474 7.65181 1.23564 6.86064C2.02681 6.06947 3.09987 5.625 4.21875 5.625H29.5312C30.6501 5.625 31.7232 6.06947 32.5144 6.86064C33.3055 7.65181 33.75 8.72487 33.75 9.84375V14.0625H36.6188C37.2508 14.0631 37.8747 14.2057 38.4443 14.4797C39.0138 14.7538 39.5145 15.1524 39.9094 15.6459L44.0747 20.8491C44.674 21.5977 45.0004 22.5282 45 23.4872V29.5312C45 30.6501 44.5555 31.7232 43.7644 32.5144C42.9732 33.3055 41.9001 33.75 40.7812 33.75H39.375C39.375 35.2418 38.7824 36.6726 37.7275 37.7275C36.6726 38.7824 35.2418 39.375 33.75 39.375C32.2582 39.375 30.8274 38.7824 29.7725 37.7275C28.7176 36.6726 28.125 35.2418 28.125 33.75H14.0625C14.0641 34.4998 13.9158 35.2423 13.6263 35.9339C13.3369 36.6256 12.912 37.2523 12.3768 37.7774C11.8416 38.3025 11.2068 38.7153 10.5098 38.9915C9.81277 39.2677 9.06755 39.4018 8.31795 39.3859C7.56835 39.3699 6.8295 39.2043 6.14483 38.8987C5.46017 38.5931 4.84351 38.1537 4.3311 37.6064C3.8187 37.059 3.42089 36.4147 3.16107 35.7114C2.90124 35.0081 2.78464 34.26 2.81813 33.5109C1.9942 33.2209 1.2806 32.6824 0.775812 31.9695C0.271028 31.2567 -4.71149e-05 30.4047 6.14224e-09 29.5312L6.14224e-09 9.84375ZM3.63937 30.8138C4.14842 29.9819 4.86497 29.2967 5.71873 28.8254C6.57249 28.3541 7.53412 28.1128 8.50926 28.1253C9.4844 28.1378 10.4395 28.4036 11.281 28.8966C12.1224 29.3896 12.8212 30.0929 13.3087 30.9375H28.8787C29.3724 30.0825 30.0825 29.3724 30.9375 28.8787V9.84375C30.9375 9.47079 30.7893 9.1131 30.5256 8.84938C30.2619 8.58566 29.9042 8.4375 29.5312 8.4375H4.21875C3.84579 8.4375 3.4881 8.58566 3.22438 8.84938C2.96066 9.1131 2.8125 9.47079 2.8125 9.84375V29.5312C2.81228 29.8019 2.89018 30.0669 3.03685 30.2944C3.18353 30.5219 3.39274 30.7022 3.63937 30.8138ZM33.75 28.125C34.7374 28.125 35.7073 28.3849 36.5624 28.8786C37.4175 29.3723 38.1276 30.0824 38.6213 30.9375H40.7812C41.1542 30.9375 41.5119 30.7893 41.7756 30.5256C42.0393 30.2619 42.1875 29.9042 42.1875 29.5312V23.4844C42.1869 23.1652 42.0778 22.8558 41.8781 22.6069L37.7156 17.4038C37.5841 17.2391 37.4172 17.106 37.2274 17.0145C37.0375 16.923 36.8295 16.8753 36.6188 16.875H33.75V28.125ZM8.4375 30.9375C7.69158 30.9375 6.97621 31.2338 6.44876 31.7613C5.92132 32.2887 5.625 33.0041 5.625 33.75C5.625 34.4959 5.92132 35.2113 6.44876 35.7387C6.97621 36.2662 7.69158 36.5625 8.4375 36.5625C9.18342 36.5625 9.89879 36.2662 10.4262 35.7387C10.9537 35.2113 11.25 34.4959 11.25 33.75C11.25 33.0041 10.9537 32.2887 10.4262 31.7613C9.89879 31.2338 9.18342 30.9375 8.4375 30.9375ZM33.75 30.9375C33.0041 30.9375 32.2887 31.2338 31.7613 31.7613C31.2338 32.2887 30.9375 33.0041 30.9375 33.75C30.9375 34.4959 31.2338 35.2113 31.7613 35.7387C32.2887 36.2662 33.0041 36.5625 33.75 36.5625C34.4959 36.5625 35.2113 36.2662 35.7387 35.7387C36.2662 35.2113 36.5625 34.4959 36.5625 33.75C36.5625 33.0041 36.2662 32.2887 35.7387 31.7613C35.2113 31.2338 34.4959 30.9375 33.75 30.9375Z"
+                                            fill="#826543" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h6>Free Shipping</h6>
+                                    <p>Orders Over $500</p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="gs-info-card">
+                                <div class="gs-info-card-icon">
+                                    <svg width="45" height="45" viewBox="0 0 45 45" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_349_193)">
+                                            <path
+                                                d="M10.2762 3.7351C10.1102 3.52152 9.90064 3.34571 9.66144 3.21935C9.42224 3.093 9.1589 3.01898 8.88889 3.00222C8.61889 2.98546 8.34841 3.02635 8.09542 3.12215C7.84243 3.21796 7.61273 3.3665 7.42156 3.55791L4.51343 6.46885C3.155 7.8301 2.65437 9.75666 3.24781 11.447C5.71361 18.442 9.7198 24.7934 14.9703 30.032C20.2088 35.2825 26.5603 39.2887 33.5553 41.7545C35.2456 42.3479 37.1722 41.8473 38.5334 40.4888L41.4416 37.5807C41.633 37.3896 41.7815 37.1598 41.8773 36.9069C41.9731 36.6539 42.014 36.3834 41.9972 36.1134C41.9805 35.8434 41.9065 35.58 41.7801 35.3408C41.6538 35.1016 41.478 34.8921 41.2644 34.726L34.7759 29.6804C34.5476 29.5038 34.2822 29.3812 33.9997 29.3218C33.7171 29.2623 33.4249 29.2676 33.1447 29.3373L26.9853 30.8757C26.1631 31.0798 25.3021 31.0682 24.4857 30.8421C23.6693 30.6159 22.925 30.1828 22.325 29.5848L15.4175 22.6745C14.8189 22.0747 14.3854 21.3306 14.1587 20.5142C13.9321 19.6978 13.92 18.8366 14.1237 18.0142L15.665 11.8548C15.7346 11.5746 15.7399 11.2823 15.6805 10.9998C15.6211 10.7173 15.4985 10.4519 15.3219 10.2235L10.2762 3.7351ZM5.29812 1.43728C5.79029 0.944955 6.38158 0.562964 7.0327 0.316676C7.68383 0.0703875 8.3799 -0.0345619 9.07469 0.00879643C9.76949 0.0521547 10.4471 0.242829 11.0626 0.568157C11.678 0.893485 12.2172 1.34602 12.6444 1.89572L17.69 8.38135C18.6153 9.57103 18.9416 11.1207 18.5759 12.5832L17.0375 18.7426C16.9585 19.0616 16.9631 19.3957 17.0508 19.7124C17.1385 20.0292 17.3063 20.318 17.5381 20.551L24.4484 27.4613C24.6817 27.6936 24.971 27.8618 25.2883 27.9495C25.6056 28.0372 25.9402 28.0415 26.2597 27.962L32.4162 26.4235C33.1381 26.2441 33.8911 26.2306 34.6189 26.3841C35.3467 26.5375 36.0302 26.8539 36.6181 27.3095L43.1037 32.3551C45.4353 34.1692 45.6491 37.6145 43.5622 39.6985L40.6541 42.6067C38.5728 44.6879 35.4622 45.602 32.5625 44.581C25.1394 41.9727 18.4003 37.7235 12.8469 32.1498C7.27354 26.5972 3.02436 19.8591 0.415621 12.437C-0.602504 9.5401 0.311559 6.42666 2.39281 4.34541L5.29812 1.43728ZM30.9369 1.40635C30.9369 1.03339 31.085 0.675701 31.3488 0.411978C31.6125 0.148255 31.9702 9.71975e-05 32.3431 9.71975e-05H43.5931C43.9661 9.71975e-05 44.3238 0.148255 44.5875 0.411978C44.8512 0.675701 44.9994 1.03339 44.9994 1.40635V12.6563C44.9994 13.0293 44.8512 13.387 44.5875 13.6507C44.3238 13.9144 43.9661 14.0626 43.5931 14.0626C43.2202 14.0626 42.8625 13.9144 42.5988 13.6507C42.335 13.387 42.1869 13.0293 42.1869 12.6563V4.80103L30.5262 16.4645C30.2622 16.7285 29.9041 16.8769 29.5306 16.8769C29.1572 16.8769 28.7991 16.7285 28.535 16.4645C28.2709 16.2004 28.1226 15.8423 28.1226 15.4688C28.1226 15.0954 28.2709 14.7373 28.535 14.4732L40.1984 2.8126H32.3431C31.9702 2.8126 31.6125 2.66444 31.3488 2.40072C31.085 2.13699 30.9369 1.77931 30.9369 1.40635Z"
+                                                fill="#826543" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_349_193">
+                                                <rect width="45" height="45" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h6>24/7 Support</h6>
+                                    <p>Ready For You</p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12 ">
+                            <div class="gs-info-card">
+                                <div class="gs-info-card-icon">
+                                    <svg width="45" height="45" viewBox="0 0 45 45" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M22.4991 8.4375C19.4598 8.43867 16.5026 9.42449 14.0706 11.2473C11.6386 13.0701 9.86255 15.6318 9.00855 18.5487C8.15455 21.4655 8.26854 24.5806 9.33346 27.4272C10.3984 30.2739 12.3569 32.6989 14.9156 34.339C17.4744 35.9792 20.4957 36.7463 23.5269 36.5253C26.5582 36.3043 29.4363 35.1072 31.7301 33.1133C34.024 31.1193 35.6101 28.4359 36.2509 25.4649C36.8917 22.4939 36.5527 19.3953 35.2847 16.6331C35.1467 16.2973 35.1439 15.9211 35.277 15.5833C35.41 15.2455 35.6686 14.9722 35.9985 14.8207C36.3285 14.6691 36.7042 14.6511 37.0472 14.7703C37.3901 14.8895 37.6737 15.1368 37.8385 15.4603C39.36 18.7751 39.7666 22.4936 38.9974 26.0589C38.2282 29.6242 36.3246 32.8443 33.5717 35.2368C30.8188 37.6294 27.3648 39.0657 23.7271 39.3305C20.0895 39.5953 16.4639 38.6744 13.3935 36.7057C10.3232 34.737 7.97325 31.8266 6.69582 28.4103C5.41839 24.994 5.28219 21.2558 6.30762 17.7556C7.33305 14.2554 9.46492 11.1817 12.3839 8.99481C15.3028 6.80792 18.8518 5.62562 22.4991 5.625V8.4375Z"
+                                            fill="#826543" />
+                                        <path
+                                            d="M22.5 12.5607V1.50193C22.5001 1.36833 22.5382 1.23751 22.6099 1.12478C22.6816 1.01206 22.7839 0.922096 22.9049 0.865435C23.0259 0.808774 23.1606 0.787759 23.2931 0.804849C23.4256 0.821939 23.5505 0.876428 23.6531 0.961934L30.2906 6.49131C30.6281 6.77256 30.6281 7.29006 30.2906 7.57131L23.6531 13.1007C23.5505 13.1862 23.4256 13.2407 23.2931 13.2578C23.1606 13.2749 23.0259 13.2538 22.9049 13.1972C22.7839 13.1405 22.6816 13.0506 22.6099 12.9378C22.5382 12.8251 22.5001 12.6943 22.5 12.5607Z"
+                                            fill="#826543" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h6>No Return</h6>
+                                    <p>No Return Policy</p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="gs-info-card">
+                                <div class="gs-info-card-icon"><svg width="45" height="45" viewBox="0 0 45 45"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M39.375 8.4375C40.1209 8.4375 40.8363 8.73382 41.3637 9.26126C41.8912 9.78871 42.1875 10.5041 42.1875 11.25V33.75C42.1875 34.4959 41.8912 35.2113 41.3637 35.7387C40.8363 36.2662 40.1209 36.5625 39.375 36.5625H5.625C4.87908 36.5625 4.16371 36.2662 3.63626 35.7387C3.10882 35.2113 2.8125 34.4959 2.8125 33.75V11.25C2.8125 10.5041 3.10882 9.78871 3.63626 9.26126C4.16371 8.73382 4.87908 8.4375 5.625 8.4375H39.375ZM5.625 5.625C4.13316 5.625 2.70242 6.21763 1.64752 7.27252C0.592632 8.32742 0 9.75816 0 11.25L0 33.75C0 35.2418 0.592632 36.6726 1.64752 37.7275C2.70242 38.7824 4.13316 39.375 5.625 39.375H39.375C40.8668 39.375 42.2976 38.7824 43.3525 37.7275C44.4074 36.6726 45 35.2418 45 33.75V11.25C45 9.75816 44.4074 8.32742 43.3525 7.27252C42.2976 6.21763 40.8668 5.625 39.375 5.625H5.625Z"
+                                            fill="#826543" />
+                                        <path
+                                            d="M5.625 15.4688C5.625 15.0958 5.77316 14.7381 6.03688 14.4744C6.3006 14.2107 6.65829 14.0625 7.03125 14.0625H12.6562C13.0292 14.0625 13.3869 14.2107 13.6506 14.4744C13.9143 14.7381 14.0625 15.0958 14.0625 15.4688V18.2812C14.0625 18.6542 13.9143 19.0119 13.6506 19.2756C13.3869 19.5393 13.0292 19.6875 12.6562 19.6875H7.03125C6.65829 19.6875 6.3006 19.5393 6.03688 19.2756C5.77316 19.0119 5.625 18.6542 5.625 18.2812V15.4688ZM5.625 23.9062C5.625 23.5333 5.77316 23.1756 6.03688 22.9119C6.3006 22.6482 6.65829 22.5 7.03125 22.5H21.0938C21.4667 22.5 21.8244 22.6482 22.0881 22.9119C22.3518 23.1756 22.5 23.5333 22.5 23.9062C22.5 24.2792 22.3518 24.6369 22.0881 24.9006C21.8244 25.1643 21.4667 25.3125 21.0938 25.3125H7.03125C6.65829 25.3125 6.3006 25.1643 6.03688 24.9006C5.77316 24.6369 5.625 24.2792 5.625 23.9062ZM5.625 29.5312C5.625 29.1583 5.77316 28.8006 6.03688 28.5369C6.3006 28.2732 6.65829 28.125 7.03125 28.125H9.84375C10.2167 28.125 10.5744 28.2732 10.8381 28.5369C11.1018 28.8006 11.25 29.1583 11.25 29.5312C11.25 29.9042 11.1018 30.2619 10.8381 30.5256C10.5744 30.7893 10.2167 30.9375 9.84375 30.9375H7.03125C6.65829 30.9375 6.3006 30.7893 6.03688 30.5256C5.77316 30.2619 5.625 29.9042 5.625 29.5312ZM14.0625 29.5312C14.0625 29.1583 14.2107 28.8006 14.4744 28.5369C14.7381 28.2732 15.0958 28.125 15.4688 28.125H18.2812C18.6542 28.125 19.0119 28.2732 19.2756 28.5369C19.5393 28.8006 19.6875 29.1583 19.6875 29.5312C19.6875 29.9042 19.5393 30.2619 19.2756 30.5256C19.0119 30.7893 18.6542 30.9375 18.2812 30.9375H15.4688C15.0958 30.9375 14.7381 30.7893 14.4744 30.5256C14.2107 30.2619 14.0625 29.9042 14.0625 29.5312ZM22.5 29.5312C22.5 29.1583 22.6482 28.8006 22.9119 28.5369C23.1756 28.2732 23.5333 28.125 23.9062 28.125H26.7188C27.0917 28.125 27.4494 28.2732 27.7131 28.5369C27.9768 28.8006 28.125 29.1583 28.125 29.5312C28.125 29.9042 27.9768 30.2619 27.7131 30.5256C27.4494 30.7893 27.0917 30.9375 26.7188 30.9375H23.9062C23.5333 30.9375 23.1756 30.7893 22.9119 30.5256C22.6482 30.2619 22.5 29.9042 22.5 29.5312ZM30.9375 29.5312C30.9375 29.1583 31.0857 28.8006 31.3494 28.5369C31.6131 28.2732 31.9708 28.125 32.3438 28.125H35.1562C35.5292 28.125 35.8869 28.2732 36.1506 28.5369C36.4143 28.8006 36.5625 29.1583 36.5625 29.5312C36.5625 29.9042 36.4143 30.2619 36.1506 30.5256C35.8869 30.7893 35.5292 30.9375 35.1562 30.9375H32.3438C31.9708 30.9375 31.6131 30.7893 31.3494 30.5256C31.0857 30.2619 30.9375 29.9042 30.9375 29.5312Z"
+                                            fill="#826543" />
+                                    </svg>
+                                </div>
+
+                                <div>
+                                    <h6>Quick Payment</h6>
+                                    <p>100% Secure</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- SECTION TITLE -->
+                <div class="gs-header">
+                    <div class="titleBox">
+                        <label>Our Category</label>
+                        <h2 class="gs-title">Garden Supplies</h2>
+                    </div>
+                    <div class="gs-nav">
+                        <div class="gs-prev">←</div>
+                        <div class="gs-next">→</div>
+                    </div>
+                </div>
+
+                <!-- CAROUSEL -->
+                <div class="owl-carousel gs-carousel">
+                    <div class="gs-card">
+                        <div class="gs-card-img">
+                            <img src="../assets/images/product/limestone.webp" alt="Sand">
+                        </div>
+                        <div class="gs-card-footer">
+                            <h5>Sand</h5>
+                            <a href="#">Shop Now →</a>
+                        </div>
+                    </div>
+
+                    <div class="gs-card">
+                        <div class="gs-card-img">
+                            <img src="../assets/images/product/riverrocks.webp" alt="Soil">
+                        </div>
+                        <div class="gs-card-footer">
+                            <h5>Soil</h5>
+                            <a href="#">Shop Now →</a>
+                        </div>
+                    </div>
+
+                    <div class="gs-card">
+                        <div class="gs-card-img">
+                            <img src="../assets/images/product/soil.webp" alt="Limestones">
+                        </div>
+                        <div class="gs-card-footer">
+                            <h5>Limestones</h5>
+                            <a href="#">Shop Now →</a>
+                        </div>
+                    </div>
+
+                    <div class="gs-card">
+                        <div class="gs-card-img">
+                            <img src="../assets/images/product/lime.webp" alt="River Rocks">
+                        </div>
+                        <div class="gs-card-footer">
+                            <h5>River Rocks</h5>
+                            <a href="#">Shop Now →</a>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </section>
+
+        <section class="au-section">
+            <div class="container">
+                <div class="row align-items-center">
+
+                    <!-- LEFT IMAGE STACK -->
+                    <div class="col-lg-6">
+                        <div class="au-image-wrap">
+                            <div class="au-img au-img-top">
+                                <img src="../assets/images/aboutus/au1.webp" alt="Team">
+                            </div>
+                            <div class="au-img au-img-bottom">
+                                <img src="../assets/images/aboutus/au2.webp" alt="Gardening">
+                            </div>
+
+                            <!-- DOTTED ART -->
+                            <div class="au-dots"></div>
+
+                            <!-- FLOATING BADGE -->
+                            <div class="au-badge">
+                                <div class="icon"><svg width="50" height="50" viewBox="0 0 50 50" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M6.25 3.125C5.4212 3.125 4.62634 3.45424 4.04029 4.04029C3.45424 4.62634 3.125 5.4212 3.125 6.25V31.25C3.125 32.0788 3.45424 32.8737 4.04029 33.4597C4.62634 34.0458 5.4212 34.375 6.25 34.375H36.2063C37.8637 34.3754 39.4532 35.0341 40.625 36.2063L46.875 42.4563V6.25C46.875 5.4212 46.5458 4.62634 45.9597 4.04029C45.3737 3.45424 44.5788 3.125 43.75 3.125H6.25ZM43.75 0C45.4076 0 46.9973 0.65848 48.1694 1.83058C49.3415 3.00269 50 4.5924 50 6.25V46.2281C49.9999 46.5373 49.9081 46.8395 49.7363 47.0965C49.5644 47.3535 49.3201 47.5537 49.0344 47.6718C48.7487 47.7899 48.4343 47.8206 48.1311 47.76C47.828 47.6993 47.5496 47.5501 47.3312 47.3312L38.4156 38.4156C37.8297 37.8295 37.035 37.5002 36.2063 37.5H6.25C4.5924 37.5 3.00269 36.8415 1.83058 35.6694C0.65848 34.4973 0 32.9076 0 31.25V6.25C0 4.5924 0.65848 3.00269 1.83058 1.83058C3.00269 0.65848 4.5924 0 6.25 0L43.75 0Z"
+                                            fill="white" />
+                                        <path
+                                            d="M15.625 18.75C15.625 19.5788 15.2958 20.3737 14.7097 20.9597C14.1237 21.5458 13.3288 21.875 12.5 21.875C11.6712 21.875 10.8763 21.5458 10.2903 20.9597C9.70424 20.3737 9.375 19.5788 9.375 18.75C9.375 17.9212 9.70424 17.1263 10.2903 16.5403C10.8763 15.9542 11.6712 15.625 12.5 15.625C13.3288 15.625 14.1237 15.9542 14.7097 16.5403C15.2958 17.1263 15.625 17.9212 15.625 18.75ZM28.125 18.75C28.125 19.5788 27.7958 20.3737 27.2097 20.9597C26.6237 21.5458 25.8288 21.875 25 21.875C24.1712 21.875 23.3763 21.5458 22.7903 20.9597C22.2042 20.3737 21.875 19.5788 21.875 18.75C21.875 17.9212 22.2042 17.1263 22.7903 16.5403C23.3763 15.9542 24.1712 15.625 25 15.625C25.8288 15.625 26.6237 15.9542 27.2097 16.5403C27.7958 17.1263 28.125 17.9212 28.125 18.75ZM40.625 18.75C40.625 19.5788 40.2958 20.3737 39.7097 20.9597C39.1237 21.5458 38.3288 21.875 37.5 21.875C36.6712 21.875 35.8763 21.5458 35.2903 20.9597C34.7042 20.3737 34.375 19.5788 34.375 18.75C34.375 17.9212 34.7042 17.1263 35.2903 16.5403C35.8763 15.9542 36.6712 15.625 37.5 15.625C38.3288 15.625 39.1237 15.9542 39.7097 16.5403C40.2958 17.1263 40.625 17.9212 40.625 18.75Z"
+                                            fill="white" />
+                                    </svg>
+                                </div>
+                                <p>Excellent<br>Customer Service</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- RIGHT CONTENT -->
+                    <div class="col-lg-6">
+                        <div class="au-content">
+                            <small>About Us</small>
+                            <h2>Welcome To Landscap</h2>
+
+                            <p class="au-text">
+                                Lorem ipsum dolor sit amet, id velit vivamus donec vitae nulla sem,
+                                tincidunt adipiscing amet vestibulum, tincidunt convallis at tellus
+                                cras sagittis orci, sem iaculis nibh nunc ac.
+                            </p>
+
+                            <ul class="au-list">
+                                <li>We provide the most reasonable cost.</li>
+                                <li>Finish work before Deadline</li>
+                            </ul>
+
+                            <p class="au-note">
+                                Over 20 Years’ Experience Providing Top Quality Carpentry Across world
+                                orem ipsum dolor sit amet consectetur
+                            </p>
+
+                            <a href="#" class="au-btn">Read More</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="op-section">
+            <div class="container">
+
+                <!-- HEADER -->
+                <div class="op-header text-center">
+                    <label>Product Portfolio</label>
+                    <h2>Our Product</h2>
+                </div>
+
+                <!-- PRODUCTS -->
+                <div class="op-carousel-wrap">
+                    <div class="row op-row flex-nowrap">
+                        <!-- PRODUCT CARD -->
+                        <div class="col-lg-3 col-md-3 col-sm-12 op-col">
+                            <div class="op-card">
+                                <div class="op-img">
+                                    <img src="../assets/images/product/lime.webp" alt="">
+                                </div>
+                                <div class="op-body">
+                                    <h5>Crushed Limestone</h5>
+                                    <div class="op-rating">★★★★★</div>
+                                    <div class="op-price">
+                                        <span>$21.00</span>
+                                        <del>$21.00</del>
+                                    </div>
+                                    <div class="op-actions">
+                                        <button>Add to Cart</button>
+                                        <span class="op-wish">♡</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-12 op-col">
+                            <div class="op-card">
+                                <div class="op-img">
+                                    <img src="../assets/images/product/limestone.webp" alt="">
+                                </div>
+                                <div class="op-body">
+                                    <h5>Crushed Limestone</h5>
+                                    <div class="op-rating">★★★★★</div>
+                                    <div class="op-price">
+                                        <span>$21.00</span>
+                                        <del>$21.00</del>
+                                    </div>
+                                    <div class="op-actions">
+                                        <button>Add to Cart</button>
+                                        <span class="op-wish">♡</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-12 op-col">
+                            <div class="op-card">
+                                <div class="op-img">
+                                    <img src="../assets/images/product/riverrocks.webp" alt="">
+                                </div>
+                                <div class="op-body">
+                                    <h5>Crushed Limestone</h5>
+                                    <div class="op-rating">★★★★★</div>
+                                    <div class="op-price">
+                                        <span>$21.00</span>
+                                        <del>$21.00</del>
+                                    </div>
+                                    <div class="op-actions">
+                                        <button>Add to Cart</button>
+                                        <span class="op-wish">♡</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-12 op-col">
+                            <div class="op-card">
+                                <div class="op-img">
+                                    <img src="../assets/images/product/soil.webp" alt="">
+                                </div>
+                                <div class="op-body">
+                                    <h5>Crushed Limestone</h5>
+                                    <div class="op-rating">★★★★★</div>
+                                    <div class="op-price">
+                                        <span>$21.00</span>
+                                        <del>$21.00</del>
+                                    </div>
+                                    <div class="op-actions">
+                                        <button>Add to Cart</button>
+                                        <span class="op-wish">♡</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-12 op-col">
+                            <div class="op-card">
+                                <div class="op-img">
+                                    <img src="../assets/images/product/lime.webp" alt="">
+                                </div>
+                                <div class="op-body">
+                                    <h5>Crushed Limestone</h5>
+                                    <div class="op-rating">★★★★★</div>
+                                    <div class="op-price">
+                                        <span>$21.00</span>
+                                        <del>$21.00</del>
+                                    </div>
+                                    <div class="op-actions">
+                                        <button>Add to Cart</button>
+                                        <span class="op-wish">♡</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-12 op-col">
+                            <div class="op-card">
+                                <div class="op-img">
+                                    <img src="../assets/images/product/lime.webp" alt="">
+                                </div>
+                                <div class="op-body">
+                                    <h5>Crushed Limestone</h5>
+                                    <div class="op-rating">★★★★★</div>
+                                    <div class="op-price">
+                                        <span>$21.00</span>
+                                        <del>$21.00</del>
+                                    </div>
+                                    <div class="op-actions">
+                                        <button>Add to Cart</button>
+                                        <span class="op-wish">♡</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <a href="#" class="op-view">View All</a>
+                </div>
+
+            </div>
+        </section>
+        <section class="ls-why-choose-us">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <!-- Left Side -->
+                    <div class="col-lg-5">
+                        <div class="ls-why-choose-us-content">
+                            <label>Why Choose Us</label>
+                            <h2 class="ls-section-title">Premium Landscaping<br>Supplies You Can Rely On</h2>
+                            <p class="ls-section-desc">
+                                We provide high-quality firewood, gravels, soils, mulch varieties, garden supplies, and
+                                more for your outdoor needs. With competitive pricing, a wide product selection, and
+                                reliable delivery, we’re your landscaping partner.
+                            </p>
+                            <ul class="ls-bullets list-unstyled mb-0">
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i> No gimmicks, the most
+                                    reasonable cost.</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Finish work before
+                                    Deadline</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Right Side -->
+                    <div class="col-lg-7">
+                        <div class="row row-gap-4">
+                            <div class="col-md-6">
+                                <div class="ls-feature-card h-100 p-4">
+                                    <div class="ls-feature-icon mb-3">
+                                        <i class="bi bi-truck fs-3 "></i>
+                                    </div>
+                                    <h5 class="ls-feature-title ">Free Complimentary Trailer Hire</h5>
+                                    <p class="ls-feature-desc mb-0">Available with every purchase, making your transport
+                                        easy and cost-effective.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="ls-feature-card h-100 p-4">
+                                    <div class="ls-feature-icon mb-3">
+                                        <i class="bi bi-clock-history fs-3 "></i>
+                                    </div>
+                                    <h5 class="ls-feature-title">Great Opening Hours</h5>
+                                    <p class="ls-feature-desc mb-0">Open 7 days a week for your convenience, so you can
+                                        shop when it suits you best.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="ls-feature-card h-100 p-4">
+                                    <div class="ls-feature-icon mb-3">
+                                        <i class="bi bi-calendar2-week fs-3 "></i>
+                                    </div>
+                                    <h5 class="ls-feature-title">Delivery Available 7 Days a Week</h5>
+                                    <p class="ls-feature-desc mb-0">Fast, reliable delivery to your door, every day of
+                                        the week.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="ls-feature-card h-100 p-4">
+                                    <div class="ls-feature-icon mb-3">
+                                        <i class="bi bi-box-seam fs-3 "></i>
+                                    </div>
+                                    <h5 class="ls-feature-title">Bulk Orders</h5>
+                                    <p class="ls-feature-desc mb-0">Special rates for bulk purchases of complementary
+                                        landscaping supplies.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="ls-testimonials">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="ls-section-label d-block mb-2">Testimonial</span>
+                    <h2 class="ls-section-title mb-0">Success Stories to know<br>about our Landscape</h2>
+                </div>
+                <div class="ls-testimonial-carousel owl-carousel owl-theme">
+                    <!-- Testimonial Card 1 -->
+                    <div class="ls-testimonial-card p-4">
+                        <p class="ls-testimonial-text mb-4">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie tincidunt augue,
+                            id laoreet mi tempor nec. Integer aliquam enim in magna eu eu commodo nisi.
+                        </p>
+                        <div class="d-flex align-items-center">
+                            <img src="../assets/images/user1.webp" alt="John duo" class="ls-avatar rounded-circle me-3"
+                                width="48" height="48">
+                            <div>
+                                <div class="ls-testimonial-name fw-bold">John duo</div>
+                                <div class="ls-testimonial-role text-muted small">Homeowner</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial Card 2 -->
+                    <div class="ls-testimonial-card p-4">
+                        <p class="ls-testimonial-text mb-4">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie tincidunt augue,
+                            id laoreet mi tempor nec. Integer aliquam enim in magna eu eu commodo nisi.
+                        </p>
+                        <div class="d-flex align-items-center">
+                            <img src="../assets/images/user2.webp" alt="B F Skinner"
+                                class="ls-avatar rounded-circle me-3" width="48" height="48">
+                            <div>
+                                <div class="ls-testimonial-name fw-bold">B F Skinner</div>
+                                <div class="ls-testimonial-role text-muted small">Landscaper</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial Card 3 -->
+                    <div class="ls-testimonial-card p-4">
+                        <p class="ls-testimonial-text mb-4">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie tincidunt augue,
+                            id laoreet mi tempor nec. Integer aliquam enim in magna eu eu commodo nisi.
+                        </p>
+                        <div class="d-flex align-items-center">
+                            <img src="../assets/images/user3.webp" alt="Elizabeth Harlock"
+                                class="ls-avatar rounded-circle me-3" width="48" height="48">
+                            <div>
+                                <div class="ls-testimonial-name fw-bold">Elizabeth Harlock</div>
+                                <div class="ls-testimonial-role text-muted small">Architect</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add more testimonial cards as needed -->
+                </div>
+            </div>
+        </section>
+        <section class="ls-latest-blog py-5">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <div>
+                        <span class="ls-section-label d-block mb-2">Latest Blog</span>
+                        <h2 class="ls-section-title mb-0">Our Latest Blog</h2>
+                    </div>
+                    <a href="#" class="ls-view-all text-success fw-semibold">View All <i
+                            class="bi bi-arrow-right"></i></a>
+                </div>
+                <div class="ls-blog-carousel owl-carousel owl-theme">
+                    <!-- Blog Card 1 -->
+                    <div class="ls-blog-card card border-0 shadow-sm">
+                        <img src="../assets/images/blog1.webp" class="card-img-top" alt="Blog 1">
+                        <div class="card-body">
+                            <div class="ls-blog-meta mb-2 text-muted small">
+                                <i class="bi bi-calendar3 me-1"></i> 24 Jan, 2026 &nbsp; | &nbsp; <i
+                                    class="bi bi-person me-1"></i> Alex Paterson
+                            </div>
+                            <h5 class="card-title mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h5>
+                            <p class="card-text mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Suspendisse varius enim in eros elementum tristique.</p>
+                            <a href="#" class="ls-learn-more text-success fw-semibold">Learn More <i
+                                    class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <!-- Blog Card 2 -->
+                    <div class="ls-blog-card card border-0 shadow-sm">
+                        <img src="../assets/images/blog2.webp" class="card-img-top" alt="Blog 2">
+                        <div class="card-body">
+                            <div class="ls-blog-meta mb-2 text-muted small">
+                                <i class="bi bi-calendar3 me-1"></i> 22 Jan, 2026 &nbsp; | &nbsp; <i
+                                    class="bi bi-person me-1"></i> Alex Paterson
+                            </div>
+                            <h5 class="card-title mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h5>
+                            <p class="card-text mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Suspendisse varius enim in eros elementum tristique.</p>
+                            <a href="#" class="ls-learn-more text-success fw-semibold">Learn More <i
+                                    class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <!-- Blog Card 3 -->
+                    <div class="ls-blog-card card border-0 shadow-sm">
+                        <img src="../assets/images/blog3.webp" class="card-img-top" alt="Blog 3">
+                        <div class="card-body">
+                            <div class="ls-blog-meta mb-2 text-muted small">
+                                <i class="bi bi-calendar3 me-1"></i> 20 Jan, 2026 &nbsp; | &nbsp; <i
+                                    class="bi bi-person me-1"></i> Alex Paterson
+                            </div>
+                            <h5 class="card-title mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h5>
+                            <p class="card-text mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Suspendisse varius enim in eros elementum tristique.</p>
+                            <a href="#" class="ls-learn-more text-success fw-semibold">Learn More <i
+                                    class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="ls-blog-card card border-0 shadow-sm">
+                        <img src="../assets/images/blog3.webp" class="card-img-top" alt="Blog 3">
+                        <div class="card-body">
+                            <div class="ls-blog-meta mb-2 text-muted small">
+                                <i class="bi bi-calendar3 me-1"></i> 20 Jan, 2026 &nbsp; | &nbsp; <i
+                                    class="bi bi-person me-1"></i> Alex Paterson
+                            </div>
+                            <h5 class="card-title mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h5>
+                            <p class="card-text mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Suspendisse varius enim in eros elementum tristique.</p>
+                            <a href="#" class="ls-learn-more text-success fw-semibold">Learn More <i
+                                    class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <!-- Add more blog cards as needed -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3 col-md-6 col-sm-12 mb-3 ">
+                    <div class="c-info">
+                        <div class="company-logo">Landscap </div>
+                        <p>Lorem ipsum dolor sit consectetur adipiscing elit, Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit, it consectetur adipiscing elit, Lorem ipsum dolor sit </p>
+                        <ul class="sociallist">
+                            <li><a href="#" class="text-white-50"><i class="bi bi-facebook"></i></a></li>
+                            <li><a href="#" class="text-white-50"><i class="bi bi-twitter"></i></a></li>
+                            <li><a href="#" class="text-white-50"><i class="bi bi-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6 col-sm-12 footer-col is-collapsible">
+                    <div class="c-info">
+                        <div class="footer-title">Garden Supplies <span class="ft-toggle"><i
+                                    class="bi bi-plus"></i></span></div>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-white-50">Soils</a></li>
+                            <li><a href="#" class="text-white-50">Sands</a></li>
+                            <li><a href="#" class="text-white-50">Limestones</a></li>
+                            <li><a href="#" class="text-white-50">Cement</a></li>
+                            <li><a href="#" class="text-white-50">Manure</a></li>
+                            <li><a href="#" class="text-white-50">Tools and Accessories</a></li>
+                            <li><a href="#" class="text-white-50">River Rocks</a></li>
+                            <li><a href="#" class="text-white-50">Ground Covers</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6 col-sm-12 footer-col is-collapsible">
+                    <div class="c-info">
+                        <div class="footer-title">Other Links <span class="ft-toggle"><i class="bi bi-plus"></i></span>
+                        </div>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-white-50">Home</a></li>
+                            <li><a href="#" class="text-white-50">About Us</a></li>
+                            <li><a href="#" class="text-white-50">Testimonials</a></li>
+                            <li><a href="#" class="text-white-50">Blogs</a></li>
+                            <li><a href="#" class="text-white-50">Shop</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6 col-sm-12 mb-3footer-col is-collapsible">
+                    <div class="c-info">
+                        <div class="footer-title">Contact <span class="ft-toggle"><i class="bi bi-plus"></i></span>
+                        </div>
+                        <ul class="ls-contact-list">
+                            <li>
+                                <div class="icon"><i class="bi bi-envelope-open"></i></div>
+                                <div class="title">Info@landscap.com.au</div>
+                            </li>
+                            <li>
+                                <div class="icon"><i class="bi bi-telephone-outbound"></i></div>
+                                <div class="title">012 123 1234</div>
+                            </li>
+                            <li>
+                                <div class="icon"><i class="bi bi-geo-alt"></i></div>
+                                <div class="title">123 Mackay Bucasia Rd, Bucasia QLD 4740</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2026 landscape All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/main.js"></script>
+
+
+    <!-- Owl JS -->
+</body>
+
+</html>

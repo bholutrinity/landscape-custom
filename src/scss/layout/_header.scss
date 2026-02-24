@@ -1,0 +1,126 @@
+// ==========================================================================
+// Header Layout
+// ==========================================================================
+
+// ==========================================================================
+// Header
+// ==========================================================================
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
+.main-header {
+  background-color: $body-bg;
+  padding: $space-md 0;
+  position: relative;
+  z-index: $z-index-sticky;
+
+  .navbar {
+    padding: 0;
+  }
+
+  // ==============================
+  // Logo
+  // ==============================
+  .logo {
+    font-family: $font-family-base;
+    font-size: $font-size-xl;
+    font-weight: $font-weight-bold;
+    color: $primary;
+    transition: $transition-base;
+
+    &:hover {
+      color: $secondary;
+    }
+  }
+
+  // ==============================
+  // Navigation
+  // ==============================
+  .navbar-nav {
+    gap: $space-lg;
+
+    .nav-link {
+      font-family: $font-family-base;
+      font-size: $font-size-base;
+      font-weight: $font-weight-semibold;
+      color: $body-color;
+      padding: $space-xs 0;
+      transition: $transition-base;
+      position: relative;
+
+      &:hover {
+        color: $primary;
+      }
+
+      &.active {
+        color: $primary;
+      }
+    }
+  }
+
+  // ==============================
+  // Dropdown
+  // ==============================
+  .dropdown-menu {
+    border-radius: $border-radius-lg;
+    border: 1px solid $border-color;
+    box-shadow: $shadow-md;
+    padding: $space-sm 0;
+    z-index: $z-index-dropdown;
+
+    .dropdown-item {
+      font-size: $font-size-sm;
+      padding: $space-sm $space-lg;
+      transition: $transition-base;
+
+      &:hover {
+        background-color: $light;
+        color: $primary;
+      }
+    }
+  }
+
+  // ==============================
+  // Icons
+  // ==============================
+  .header-icons {
+    gap: $space-sm;
+
+    .icon-btn {
+      width: 38px;
+      height: 38px;
+      border-radius: $border-radius-full;
+      background-color: $light;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $body-color;
+      transition: $transition-base;
+
+      i {
+        font-size: $font-size-base;
+      }
+
+      &:hover {
+        background-color: $primary;
+        color: $white;
+      }
+    }
+  }
+}
+
+// ==========================================================================
+// Responsive
+// ==========================================================================
+
+@media (max-width: $breakpoint-lg) {
+  .main-header {
+    .navbar-nav {
+      margin-top: $space-md;
+      gap: $space-sm;
+    }
+
+    .header-icons {
+      margin-top: $space-md;
+    }
+  }
+}

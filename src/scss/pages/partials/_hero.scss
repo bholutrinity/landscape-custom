@@ -1,0 +1,172 @@
+/* HERO SECTION */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background-image: url("../assets/images/herobanner1.webp");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 60px;
+  overflow: hidden;
+}
+
+/* DARK OVERLAY */
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* CONTENT */
+.hero__content {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  position: relative;
+  max-width: 700px;
+  color: #ffffff;
+  animation: fadeSlide 1.2s ease forwards;
+  .hero__title {
+    font-size: clamp(1.5rem, 1.2rem + 1.5vw, 3rem);
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    opacity: 0;
+    animation: fadeSlide 1s ease forwards;
+    animation-delay: 0.5s;
+    color: #fff;
+    text-align: center;
+    span {
+      color: #9acd32;
+    }
+  }
+}
+
+.hero__since {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 0.3s;
+}
+
+.hero__text {
+  font-size: 16px;
+  max-width: 550px;
+  margin-bottom: 30px;
+  opacity: 0;
+  animation: fadeSlide 1s ease forwards;
+  animation-delay: 0.7s;
+  text-align: center;
+}
+
+/* BUTTONS */
+.hero__buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  opacity: 0;
+  animation: fadeSlide 1s ease forwards;
+  animation-delay: 0.9s;
+}
+
+.btn {
+  padding: 12px 28px;
+  text-decoration: none;
+  font-size: 14px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.btn--primary {
+  background-color: #9acd32;
+  color: #000000;
+
+  &:hover {
+    background-color: #7fae28;
+  }
+}
+
+.btn--secondary {
+  background-color: transparent;
+  color: #ffffff;
+  border-color: #ffffff;
+
+  &:hover {
+    background-color: #ffffff;
+    color: #000000;
+  }
+}
+
+/* ANIMATIONS */
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .hero {
+    padding: 40px;
+  }
+
+  .hero__title {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 30px;
+    text-align: center;
+  }
+
+  .hero__content {
+    max-width: 100%;
+  }
+
+  .hero__title {
+    font-size: 34px;
+  }
+
+  .hero__buttons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero__title {
+    font-size: 28px;
+  }
+
+  .hero__text {
+    font-size: 14px;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}

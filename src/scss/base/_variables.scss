@@ -1,0 +1,102 @@
+// ==========================================================================
+// Variables
+// ==========================================================================
+// Central location for all color, sizing, and typography values.
+
+// Colors
+$primary: #3e4422;
+$secondary: #826543;
+$label-color: #3e4422;
+$success: #198754;
+$danger: #dc3545;
+$warning: #ffc107;
+$info: #0dcaf0;
+$light: #f8f9fa;
+$dark: #212529;
+$title-color: #3e4422;
+// Neutral Colors
+$white: #ffffff;
+$black: #000000;
+$body-bg: #ffffff;
+$body-color: #212529;
+$border-color: #dee2e6;
+$whychoose: #556700;
+// Typography
+$font-family-base:
+  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+  Arial, sans-serif;
+$font-family-mono:
+  SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
+  monospace;
+
+$font-size-base: 1rem;
+$font-size-sm: 0.875rem;
+$font-size-lg: 1.25rem;
+$font-size-xl: 1.5rem;
+$font-size-2xl: 2rem;
+
+$line-height-base: 1.5;
+$line-height-sm: 1.25;
+$line-height-lg: 1.75;
+
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// Spacing
+$spacing-unit: 1rem;
+$space-xs: $spacing-unit * 0.25;
+$space-sm: $spacing-unit * 0.5;
+$space-md: $spacing-unit;
+$space-lg: $spacing-unit * 1.5;
+$space-xl: $spacing-unit * 2;
+$space-2xl: $spacing-unit * 3;
+
+// Breakpoints
+$breakpoint-xs: 0;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-2xl: 1400px;
+
+// Border Radius
+$border-radius-base: 0.375rem;
+$border-radius-sm: 0.25rem;
+$border-radius-lg: 0.5rem;
+$border-radius-xl: 0.75rem;
+$border-radius-full: 9999px;
+
+// Shadows
+$shadow-sm: 0 0.125rem 0.25rem rgba($black, 0.075);
+$shadow-md: 0 0.5rem 1rem rgba($black, 0.1);
+$shadow-lg: 0 1rem 3rem rgba($black, 0.12);
+$shadow-xl: 0 1.5rem 3rem rgba($black, 0.15);
+
+// Transitions
+$transition-base: all 0.3s ease-in-out;
+$transition-fade: opacity 0.15s linear;
+$transition-collapse: height 0.35s ease;
+
+// Z-Index
+$z-index-dropdown: 1000;
+$z-index-sticky: 1020;
+$z-index-fixed: 1030;
+$z-index-modal-backdrop: 1040;
+$z-index-modal: 1050;
+$z-index-popover: 1060;
+$z-index-tooltip: 1070;
+
+// Container
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  2xl: 1320px,
+);
+
+// Grid
+$grid-columns: 12;
+$grid-gutter-width: 1.5rem;

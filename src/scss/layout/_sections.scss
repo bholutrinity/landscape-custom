@@ -1,0 +1,94 @@
+// ==========================================================================
+// Sections
+// ==========================================================================
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
+.hero {
+  background: linear-gradient(
+    135deg,
+    rgba($primary, 0.1),
+    rgba($primary, 0.05)
+  );
+  border-bottom: 1px solid $border-color;
+
+  h1 {
+    color: $dark;
+    line-height: 1.2;
+  }
+
+  .lead {
+    color: $secondary;
+    margin-bottom: $space-lg;
+  }
+
+  img {
+    border-radius: $border-radius-lg;
+    box-shadow: $shadow-lg;
+  }
+
+  @include breakpoint(md) {
+    min-height: 600px;
+    @include flex-center;
+  }
+}
+
+.features {
+  background-color: $light;
+  padding: $space-2xl 0;
+
+  h2 {
+    position: relative;
+    padding-bottom: $space-md;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(135deg, $primary, $info);
+      border-radius: $border-radius-full;
+    }
+  }
+}
+
+// Section Spacing
+.section {
+  padding: $space-2xl 0;
+
+  &:nth-child(even) {
+    background-color: $light;
+  }
+}
+
+// Section Header
+.section-header {
+  text-align: center;
+  margin-bottom: $space-2xl;
+
+  h2 {
+    position: relative;
+    padding-bottom: $space-md;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(135deg, $primary, $info);
+      border-radius: $border-radius-full;
+    }
+  }
+
+  p {
+    color: $secondary;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

@@ -1,0 +1,136 @@
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
+// ==========================================================================
+// Card Components
+// ==========================================================================
+
+.card {
+  border: 1px solid $border-color;
+  border-radius: $border-radius-lg;
+  box-shadow: $shadow-sm;
+  overflow: hidden;
+  @include transition(all);
+
+  &:hover {
+    box-shadow: $shadow-lg;
+    transform: translateY(-4px);
+  }
+
+  .card-header {
+    background-color: $light;
+    border-bottom: 1px solid $border-color;
+    padding: $space-md $space-lg;
+
+    h5 {
+      margin: 0;
+    }
+  }
+
+  .card-body {
+    padding: $space-lg;
+  }
+
+  .card-footer {
+    background-color: $light;
+    border-top: 1px solid $border-color;
+    padding: $space-md $space-lg;
+  }
+
+  .card-title {
+    font-weight: $font-weight-bold;
+    margin-bottom: $space-sm;
+  }
+
+  .card-text {
+    color: $secondary;
+    margin-bottom: 0;
+  }
+
+  .card-link {
+    text-decoration: none;
+    font-weight: $font-weight-semibold;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// Card Variants
+.card-primary {
+  .card-header {
+    background-color: $primary;
+    border-bottom-color: $primary;
+    color: $white;
+
+    .card-title {
+      color: $white;
+    }
+  }
+}
+
+.card-success {
+  .card-header {
+    background-color: $success;
+    border-bottom-color: $success;
+    color: $white;
+
+    .card-title {
+      color: $white;
+    }
+  }
+}
+
+.card-danger {
+  .card-header {
+    background-color: $danger;
+    border-bottom-color: $danger;
+    color: $white;
+
+    .card-title {
+      color: $white;
+    }
+  }
+}
+
+// Card Image
+.card-img-top,
+.card-img-bottom {
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-img-top {
+  border-radius: $border-radius-lg $border-radius-lg 0 0;
+}
+
+.card-img-bottom {
+  border-radius: 0 0 $border-radius-lg $border-radius-lg;
+}
+
+// Card Grid
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: $space-lg;
+
+  @include breakpoint(md) {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+
+  @include breakpoint(lg) {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  }
+}
+
+// Flat Card
+.card-flat {
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+
+  &:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}

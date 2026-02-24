@@ -1,0 +1,118 @@
+// ==========================================================================
+// Bootstrap Vendor Overrides
+// ==========================================================================
+// Customize Bootstrap components without modifying Bootstrap source.
+// Only place override rules here.
+
+@use "sass:color";
+@use "../base/variables" as *;
+
+// Override Bootstrap button border radius
+.btn {
+  border-radius: $border-radius-base;
+}
+
+// Override Bootstrap card border
+.card {
+  border-radius: $border-radius-lg;
+}
+
+// Override navbar spacing
+.navbar {
+  padding: $space-md 0;
+}
+
+// Override modal dialog styling
+.modal-content {
+  border-radius: $border-radius-lg;
+}
+
+// Override form control styling
+.form-control,
+.form-select {
+  border-radius: $border-radius-base;
+}
+
+// Override list group
+.list-group-item {
+  border-radius: 0;
+
+  &:first-child {
+    border-radius: $border-radius-base 0 0 $border-radius-base;
+  }
+
+  &:last-child {
+    border-radius: 0 $border-radius-base $border-radius-base 0;
+  }
+}
+
+// Override alert styling
+.alert {
+  border-radius: $border-radius-base;
+  border: none;
+
+  &.alert-primary {
+    background-color: rgba($primary, 0.1);
+    color: color.adjust($primary, $lightness: -20%);
+  }
+
+  &.alert-secondary {
+    background-color: rgba($secondary, 0.1);
+    color: color.adjust($secondary, $lightness: -20%);
+  }
+
+  &.alert-success {
+    background-color: rgba($success, 0.1);
+    color: color.adjust($success, $lightness: -20%);
+  }
+
+  &.alert-danger {
+    background-color: rgba($danger, 0.1);
+    color: color.adjust($danger, $lightness: -20%);
+  }
+}
+
+// Override badge styling
+.badge {
+  font-weight: $font-weight-semibold;
+  padding: 0.35em 0.65em;
+  border-radius: $border-radius-full;
+}
+
+// Override pagination
+.pagination {
+  gap: $space-xs;
+
+  .page-link {
+    border-radius: $border-radius-base;
+    border: 1px solid $border-color;
+
+    &:hover {
+      color: $primary;
+      background-color: $light;
+    }
+  }
+
+  .page-item.active .page-link {
+    background-color: $primary;
+    border-color: $primary;
+  }
+}
+
+// Override breadcrumb
+.breadcrumb {
+  border-radius: $border-radius-base;
+  background-color: $light;
+  padding: $space-sm $space-md;
+}
+
+// Override tooltip
+.tooltip-inner {
+  border-radius: $border-radius-base;
+  padding: $space-sm $space-md;
+}
+
+// Override popover
+.popover {
+  border-radius: $border-radius-lg;
+}

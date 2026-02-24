@@ -1,0 +1,166 @@
+// ==========================================================================
+// Typography
+// ==========================================================================
+// Heading and text utility styles.
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
+h1,
+.h1 {
+  font-size: $font-size-2xl;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-sm;
+}
+
+h2,
+.h2 {
+  font-size: 1.75rem;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-sm;
+}
+
+h3,
+.h3 {
+  font-size: 1.5rem;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-sm;
+}
+
+h4,
+.h4 {
+  font-size: 1.25rem;
+  font-weight: $font-weight-semibold;
+  line-height: $line-height-base;
+}
+
+h5,
+.h5 {
+  font-size: $font-size-base;
+  font-weight: $font-weight-semibold;
+  line-height: $line-height-base;
+}
+
+h6,
+.h6 {
+  font-size: 0.875rem;
+  font-weight: $font-weight-semibold;
+  line-height: $line-height-base;
+}
+
+p {
+  margin-bottom: $space-md;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.lead {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-normal;
+  line-height: $line-height-lg;
+  color: $secondary;
+}
+
+.small,
+small {
+  font-size: $font-size-sm;
+}
+
+.text-muted {
+  color: $secondary;
+}
+
+.text-primary {
+  color: $primary;
+}
+
+.text-secondary {
+  color: $secondary;
+}
+
+.text-success {
+  color: $success;
+}
+
+.text-danger {
+  color: $danger;
+}
+
+.text-warning {
+  color: $warning;
+}
+
+.text-info {
+  color: $info;
+}
+
+// Text Alignment
+.text-center {
+  text-align: center;
+}
+
+.text-start {
+  text-align: start;
+}
+
+.text-end {
+  text-align: end;
+}
+
+@include breakpoint(md) {
+  .text-md-center {
+    text-align: center;
+  }
+
+  .text-md-start {
+    text-align: start;
+  }
+
+  .text-md-end {
+    text-align: end;
+  }
+}
+
+// Text Transform
+.text-uppercase {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+// Font Weight
+.fw-light {
+  font-weight: $font-weight-light;
+}
+
+.fw-normal {
+  font-weight: $font-weight-normal;
+}
+
+.fw-semibold {
+  font-weight: $font-weight-semibold;
+}
+
+.fw-bold {
+  font-weight: $font-weight-bold;
+}
+
+// Line Height
+.lh-sm {
+  line-height: $line-height-sm;
+}
+
+.lh-base {
+  line-height: $line-height-base;
+}
+
+.lh-lg {
+  line-height: $line-height-lg;
+}

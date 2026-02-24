@@ -1,0 +1,207 @@
+// ==========================================================================
+// Footer Layout
+// ==========================================================================
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
+.footer {
+  background-color: $primary;
+  color: $white;
+  padding-top: clamp(1.875rem, 1rem + 4.375vw, 6.25rem);
+  overflow: hidden;
+
+  .c-info {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 15px;
+
+    .company-logo {
+      color: $white;
+      font-size: clamp(1.5rem, 1.25rem + 1vw, 2.5rem);
+      font-weight: $font-weight-bold;
+    }
+
+    p {
+      color: rgba($white, 0.7);
+      font-size: clamp(0.875rem, 0.8rem + 0.375vw, 1.25rem);
+      margin: 0;
+    }
+  }
+
+  .sociallist {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 15px;
+
+    li {
+      list-style: none;
+
+      a {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba($white, 0.1);
+        border-radius: 50%;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: rgba($white, 1);
+
+          i {
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+
+  .footer-title {
+    color: rgba($white, 1);
+    font-size: clamp(1.125rem, 1rem + 0.625vw, 1.75rem);
+    font-weight: 500;
+    width: 100%;
+  }
+
+  .list-unstyled {
+    display: flex;
+    flex-flow: row wrap;
+
+    li {
+      margin-bottom: $space-sm;
+      width: 100%;
+
+      a {
+        color: rgba($white, 0.5) !important;
+        text-decoration: none;
+        font-size: clamp(0.875rem, 0.825rem + 0.25vw, 1.125rem);
+
+        &:hover {
+          color: $white !important;
+        }
+      }
+    }
+  }
+
+  .ls-contact-list {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+
+    li {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: rgba($white, 0.7);
+      font-size: clamp(0.875rem, 0.8rem + 0.375vw, 1.25rem);
+
+      .icon {
+        background-color: rgba($white, 0.1);
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+      }
+
+      .title {
+        color: rgba($white, 1);
+        width: calc(100% - 55px);
+        font-size: 16px;
+      }
+
+      i {
+        color: $white;
+        font-size: clamp(1rem, 0.875rem + 0.25vw, 1.5rem);
+      }
+    }
+  }
+
+  ul.list-unstyled {
+    li {
+      margin-bottom: $space-sm;
+
+      a {
+        display: inline-block;
+      }
+    }
+  }
+  .ft-toggle {
+    display: none;
+  }
+  /* ===============================
+     ADDITION: MOBILE COLLAPSIBLE
+     (NO DESKTOP IMPACT)
+  =============================== */
+
+  .ft-arrow {
+    display: none;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid rgba($white, 0.7);
+    border-bottom: 2px solid rgba($white, 0.7);
+    transform: rotate(45deg);
+    transition: transform 0.35s ease;
+  }
+
+  @media (max-width: 767px) {
+    .ft-toggle {
+      display: block;
+    }
+    .is-collapsible {
+      .footer-title {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .ft-arrow {
+          display: inline-block;
+        }
+      }
+
+      .list-unstyled,
+      .ls-contact-list {
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition:
+          max-height 0.45s ease,
+          opacity 0.3s ease;
+      }
+
+      &.open {
+        .list-unstyled,
+        .ls-contact-list {
+          max-height: 600px;
+          opacity: 1;
+        }
+
+        .ft-arrow {
+          transform: rotate(-135deg);
+        }
+      }
+    }
+  }
+
+  /* ===============================
+     Copyright
+  =============================== */
+  .copyright {
+    background-color: $white;
+    padding: clamp(0.9375rem, 0.75rem + 0.9375vw, 1.875rem) 0;
+    font-size: clamp(0.875rem, 0.8rem + 0.375vw, 1.25rem);
+    margin-top: 50px;
+
+    p {
+      margin-bottom: 0;
+      color: rgba($black, 1);
+    }
+  }
+}

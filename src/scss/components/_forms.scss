@@ -1,0 +1,169 @@
+// ==========================================================================
+// Form Components
+// ==========================================================================
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
+.form-group {
+  margin-bottom: $space-lg;
+}
+
+.form-label {
+  font-weight: $font-weight-semibold;
+  margin-bottom: $space-sm;
+  color: $dark;
+}
+
+.form-control,
+.form-select,
+textarea.form-control {
+  border: 1px solid $border-color;
+  border-radius: $border-radius-base;
+  padding: 0.5rem 0.75rem;
+  font-size: $font-size-base;
+  font-family: $font-family-base;
+  @include transition(all);
+
+  &:focus {
+    @include input-focus;
+  }
+
+  &::placeholder {
+    color: $secondary;
+  }
+
+  &:disabled {
+    background-color: $light;
+    cursor: not-allowed;
+    opacity: 0.65;
+  }
+}
+
+// Select
+.form-select {
+  padding-right: 2rem;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 16px 12px;
+}
+
+// Checkbox & Radio
+.form-check {
+  padding-left: $space-lg;
+  margin-bottom: $space-md;
+}
+
+.form-check-input {
+  width: 1.25em;
+  height: 1.25em;
+  margin-top: 0.125em;
+  margin-left: -$space-lg;
+  border: 1px solid $border-color;
+  border-radius: $border-radius-sm;
+
+  &:checked {
+    background-color: $primary;
+    border-color: $primary;
+  }
+
+  &:focus {
+    border-color: $primary;
+    box-shadow: 0 0 0 0.2rem rgba($primary, 0.25);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.form-check-label {
+  padding-top: 0.125em;
+  margin-bottom: 0;
+  cursor: pointer;
+
+  &:hover {
+    color: $primary;
+  }
+}
+
+// Input File
+.form-control-file {
+  padding: $space-md;
+  border: 2px dashed $border-color;
+  border-radius: $border-radius-base;
+  cursor: pointer;
+  @include transition(border-color);
+
+  &:hover {
+    border-color: $primary;
+  }
+
+  &:focus {
+    @include input-focus;
+  }
+}
+
+// Form Validation
+.was-validated .form-control:valid,
+.form-control.is-valid {
+  border-color: $success;
+
+  &:focus {
+    border-color: $success;
+    box-shadow: 0 0 0 0.2rem rgba($success, 0.25);
+  }
+}
+
+.was-validated .form-control:invalid,
+.form-control.is-invalid {
+  border-color: $danger;
+
+  &:focus {
+    border-color: $danger;
+    box-shadow: 0 0 0 0.2rem rgba($danger, 0.25);
+  }
+}
+
+.form-text {
+  display: block;
+  margin-top: $space-sm;
+  font-size: $font-size-sm;
+  color: $secondary;
+}
+
+// Form Inline
+.form-inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-md;
+
+  .form-group {
+    margin-bottom: 0;
+    flex: 1;
+    min-width: 250px;
+  }
+}
+
+// Input Group
+.input-group {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.input-group-text {
+  padding: 0.5rem 0.75rem;
+  background-color: $light;
+  border: 1px solid $border-color;
+  border-radius: $border-radius-base;
+  font-weight: $font-weight-normal;
+  color: $secondary;
+}
+
+// Form Row
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: $space-md;
+}
