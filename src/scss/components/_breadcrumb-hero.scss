@@ -1,0 +1,51 @@
+// Breadcrumb Hero Section Component
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
+
+.ls-breadcrumb-hero {
+  position: relative;
+  width: 100%;
+  min-height: 180px;
+  background: #222 url("../../assets/images/aboutus/about-hero.jpg")
+    center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  padding: 3.5rem 0 2.5rem 0;
+  z-index: 1;
+}
+.ls-breadcrumb-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(34, 34, 34, 0.45);
+  z-index: 2;
+}
+.ls-breadcrumb-hero-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+}
+.ls-breadcrumb-hero-title {
+  font-size: 2.1rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  animation: fadeInDown 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.ls-breadcrumb-hero-breadcrumb {
+  color: #e6e6e6;
+  font-size: 1rem;
+  animation: fadeInUp 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media (max-width: 575.98px) {
+  .ls-breadcrumb-hero {
+    min-height: 120px;
+    padding: 2rem 0 1.2rem 0;
+  }
+  .ls-breadcrumb-hero-title {
+    font-size: 1.2rem;
+  }
+}

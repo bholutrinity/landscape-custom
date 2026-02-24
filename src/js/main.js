@@ -1,3 +1,79 @@
+// === MODAL LOGIC FOR LOGIN, SIGNUP, SEARCH ===
+document.addEventListener("DOMContentLoaded", function () {
+  // Modal elements
+  const loginModal = document.getElementById("lsLoginModal");
+  const signupModal = document.getElementById("lsSignupModal");
+  const searchModal = document.getElementById("lsSearchModal");
+
+  // Header icon triggers
+  const profileIcon = document.querySelector('.header-icons [aria-label="Profile"]');
+  const searchIcon = document.querySelector('.header-icons [aria-label="Search"]');
+
+  // Modal switch links
+  const showSignup = document.getElementById("lsShowSignup");
+  const showLogin = document.getElementById("lsShowLogin");
+
+  // Utility: open/close modal
+  function openModal(modal) {
+    [loginModal, signupModal, searchModal].forEach(m => m.classList.add('d-none'));
+    modal.classList.remove('d-none');
+    document.body.classList.add('ls-modal-open');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  function closeAllModals() {
+    [loginModal, signupModal, searchModal].forEach(m => m.classList.add('d-none'));
+    document.body.classList.remove('ls-modal-open');
+  }
+
+  // Open Login
+  if (profileIcon) {
+    profileIcon.addEventListener('click', function (e) {
+      e.preventDefault();
+      openModal(loginModal);
+    });
+  }
+  // Open Search
+  if (searchIcon) {
+    searchIcon.addEventListener('click', function (e) {
+      e.preventDefault();
+      openModal(searchModal);
+    });
+  }
+  // Switch to Signup
+  if (showSignup) {
+    showSignup.addEventListener('click', function (e) {
+      e.preventDefault();
+      openModal(signupModal);
+    });
+  }
+  // Switch to Login
+  if (showLogin) {
+    showLogin.addEventListener('click', function (e) {
+      e.preventDefault();
+      openModal(loginModal);
+    });
+  }
+
+  // ESC key closes modals
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeAllModals();
+  });
+
+  // Click outside modal card closes modal
+  [loginModal, signupModal, searchModal].forEach(modal => {
+    if (!modal) return;
+    modal.addEventListener('mousedown', function (e) {
+      if (e.target === modal) closeAllModals();
+    });
+  });
+
+  // Prevent form submit (demo only)
+  document.querySelectorAll('.ls-modal-form, .ls-signup-form').forEach(form => {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+    });
+  });
+});
 /* Sample custom JavaScript file */
 document.addEventListener("DOMContentLoaded", function () {
   console.log("Website loaded successfully");

@@ -1,0 +1,146 @@
+// Login Modal Styles
+@use "../base/_variables.scss";
+@use "../base/_mixins.scss";
+
+.ls-modal-bg {
+  background: linear-gradient(135deg, #f4faef 0%, #f8fbe9 100%);
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ls-modal-card {
+  margin: 15px 0;
+  background: #fff;
+  border-radius: 1.25rem;
+  box-shadow: 0 8px 32px rgba(60, 80, 60, 0.1);
+  max-width: 414px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2.5rem 2rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  animation: ls-fade-in 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.ls-modal-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+.ls-modal-form .form-label {
+  font-size: 0.97rem;
+  color: #6b6b6b;
+  margin-bottom: 0.25rem;
+}
+.ls-modal-form .form-control {
+  border-radius: 0.7rem;
+  border: 1px solid #e6e6e6;
+  background: #fafaf7;
+  font-size: 1rem;
+  padding: 0.7rem 1rem;
+  margin-bottom: 0.7rem;
+  transition: border-color 0.2s;
+}
+.ls-modal-form .form-control:focus {
+  border-color: #826543;
+  box-shadow: 0 0 0 2px #e6e6e6;
+}
+.ls-modal-link {
+  color: #bfa16a;
+  font-size: 0.97rem;
+  text-decoration: none;
+  float: right;
+  margin-bottom: 1rem;
+  transition: color 0.2s;
+}
+.ls-modal-link:hover {
+  color: #826543;
+}
+.ls-btn-primary {
+  background: #826543;
+  color: #fff;
+  border-radius: 0.7rem;
+  border: none;
+  font-weight: 600;
+  font-size: 1.08rem;
+  padding: 0.7rem 0;
+  margin-bottom: 0.5rem;
+  transition: background 0.2s;
+}
+.ls-btn-primary:hover {
+  background: #bfa16a;
+}
+.ls-btn-google {
+  background: #fff;
+  color: #222;
+  border: 1px solid #e6e6e6;
+  border-radius: 0.7rem;
+  font-weight: 500;
+  font-size: 1.08rem;
+  padding: 0.7rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  transition: border-color 0.2s;
+}
+.ls-btn-google:hover {
+  border-color: #bfa16a;
+}
+.ls-modal-divider {
+  text-align: center;
+  color: #bdbdbd;
+  font-size: 0.95rem;
+  margin: 0.5rem 0 0.5rem 0;
+  position: relative;
+}
+.ls-modal-divider:before,
+.ls-modal-divider:after {
+  content: "";
+  display: inline-block;
+  width: 25%;
+  height: 1px;
+  background: #e6e6e6;
+  vertical-align: middle;
+  margin: 0 0.5rem;
+}
+.ls-modal-footer {
+  font-size: 0.97rem;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+.ls-modal-footer a {
+  color: #bfa16a;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.ls-modal-footer a:hover {
+  color: #826543;
+}
+.ls-modal-terms {
+  font-size: 0.85rem;
+  color: #888;
+  text-align: center;
+  margin-top: 0.7rem;
+}
+@media (max-width: 575.98px) {
+  .ls-modal-card {
+    padding: 1.5rem 0.7rem 1.2rem 0.7rem;
+    max-width: 100vw;
+    border-radius: 0.7rem;
+  }
+}
+@keyframes ls-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}

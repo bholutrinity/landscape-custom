@@ -1,0 +1,140 @@
+// Signup Modal Styles
+@use "../base/_variables.scss";
+@use "../base/_mixins.scss";
+
+.ls-signup-modal-bg {
+  background: linear-gradient(135deg, #f4faef 0%, #f8fbe9 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+}
+.ls-signup-modal-card {
+  background: #fff;
+  border-radius: 1.25rem;
+  box-shadow: 0 8px 32px rgba(60, 80, 60, 0.1);
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2.5rem 2rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+
+  animation: ls-fade-in 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.ls-signup-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+.discription-p {
+  font-size: 0.97rem;
+  color: #6b6b6b;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.ls-signup-form .form-label {
+  font-size: 0.97rem;
+  color: #6b6b6b;
+  margin-bottom: 0.25rem;
+}
+.ls-signup-form .form-control {
+  border-radius: 0.7rem;
+  border: 1px solid #e6e6e6;
+  background: #fafaf7;
+  font-size: 1rem;
+  padding: 0.7rem 1rem;
+  margin-bottom: 0.7rem;
+  transition: border-color 0.2s;
+}
+.ls-signup-form .form-control:focus {
+  border-color: #826543;
+  box-shadow: 0 0 0 2px #e6e6e6;
+}
+.ls-signup-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  color: #888;
+  margin-bottom: 1rem;
+}
+.ls-btn-primary {
+  background: #826543;
+  color: #fff;
+  border-radius: 0.7rem;
+  border: none;
+  font-weight: 600;
+  font-size: 1.08rem;
+  padding: 0.7rem 0;
+  margin-bottom: 0.5rem;
+  transition: background 0.2s;
+}
+.ls-btn-primary:hover {
+  background: #bfa16a;
+}
+.ls-btn-google {
+  background: #fff;
+  color: #222;
+  border: 1px solid #e6e6e6;
+  border-radius: 0.7rem;
+  font-weight: 500;
+  font-size: 1.08rem;
+  padding: 0.7rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  transition: border-color 0.2s;
+}
+.ls-btn-google:hover {
+  border-color: #bfa16a;
+}
+.ls-signup-divider {
+  text-align: center;
+  color: #bdbdbd;
+  font-size: 0.95rem;
+  margin: 0.5rem 0 0.5rem 0;
+  position: relative;
+}
+.ls-signup-divider:before,
+.ls-signup-divider:after {
+  content: "";
+  display: inline-block;
+  width: 27%;
+  height: 1px;
+  background: #e6e6e6;
+  vertical-align: middle;
+  margin: 0 0.5rem;
+}
+.ls-signup-footer {
+  font-size: 0.97rem;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+.ls-signup-footer a {
+  color: #bfa16a;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.ls-signup-footer a:hover {
+  color: #826543;
+}
+.ls-signup-terms {
+  font-size: 0.85rem;
+  color: #888;
+  text-align: center;
+  margin-top: 0.7rem;
+}
+@media (max-width: 575.98px) {
+  .ls-signup-modal-card {
+    padding: 1.5rem 0.7rem 1.2rem 0.7rem;
+    max-width: 100vw;
+    border-radius: 0.7rem;
+  }
+}

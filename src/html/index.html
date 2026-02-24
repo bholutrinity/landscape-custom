@@ -101,6 +101,91 @@
         </nav>
     </header>
 
+    <!-- LOGIN MODAL -->
+    <div id="lsLoginModal" class="ls-modal-bg d-none">
+        <div class="ls-modal-card animate__animated animate__fadeIn">
+            <div class="ls-modal-title">Welcome Back to Landscape</div>
+            <p class="ls-modal-subtitle">Sign in to your Landscape account to continue</p>
+            <form class="ls-modal-form">
+                <label class="form-label" for="loginEmail">Email Address</label>
+                <input type="email" class="form-control" id="loginEmail" placeholder="john@email.com"
+                    autocomplete="username">
+                <label class="form-label" for="loginPassword">Password</label>
+                <input type="password" class="form-control" id="loginPassword" placeholder="Enter Your Password"
+                    autocomplete="current-password">
+                <a href="#" class="ls-modal-link" id="lsForgotPassword">Forgot Password?</a>
+                <button type="submit" class="ls-btn-primary w-100">Sign In</button>
+            </form>
+            <div class="ls-modal-divider">OR SIGN IN WITH</div>
+            <button class="ls-btn-google w-100" type="button"><img
+                    src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" width="20" height="20">
+                Google</button>
+            <div class="ls-modal-footer">Don't have an account? <a href="#" id="lsShowSignup">Sign up for free</a></div>
+            <div class="ls-modal-terms">By signing in, you agree to our <a href="#">Terms of Service</a> and <a
+                    href="#">Privacy Policy</a></div>
+        </div>
+    </div>
+
+    <!-- SIGNUP MODAL -->
+    <div id="lsSignupModal" class="ls-signup-modal-bg d-none">
+        <div class="ls-signup-modal-card animate__animated animate__fadeIn">
+            <div class="ls-signup-title">Create an Account</div>
+            <p class="discription-p">Join Landscape to start shopping premium Garden supplies</p>
+            <form class="ls-signup-form">
+                <label class="form-label" for="signupName">Full Name</label>
+                <input type="text" class="form-control" id="signupName" placeholder="John Doe" autocomplete="name">
+                <label class="form-label" for="signupEmail">Email Address</label>
+                <input type="email" class="form-control" id="signupEmail" placeholder="johndoe@gmail.com"
+                    autocomplete="email">
+                <label class="form-label" for="signupPassword">Password</label>
+                <input type="password" class="form-control" id="signupPassword" placeholder="Create Strong Password"
+                    autocomplete="new-password">
+                <label class="form-label" for="signupConfirm">Confirm Password</label>
+                <input type="password" class="form-control" id="signupConfirm" placeholder="Re-enter your password"
+                    autocomplete="new-password">
+                <div class="ls-signup-checkbox">
+                    <input type="checkbox" id="signupTerms" required>
+                    <label for="signupTerms">I agree to terms of service and privacy policy</label>
+                </div>
+                <button type="submit" class="ls-btn-primary w-100">Create Account</button>
+            </form>
+            <div class="ls-signup-divider">Or sign up with</div>
+            <button class="ls-btn-google w-100" type="button"><img
+                    src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" width="20" height="20">
+                Google</button>
+            <div class="ls-signup-footer">Already have an account? <a href="#" id="lsShowLogin">Sign In</a></div>
+            <div class="ls-signup-terms">By signing up, you agree to our <a href="#">Terms of Service</a> and <a
+                    href="#">Privacy Policy</a></div>
+        </div>
+    </div>
+
+    <!-- SEARCH RESULT MODAL -->
+    <div id="lsSearchModal" class="ls-search-modal-bg d-none">
+        <div class="container">
+            <div class="ls-search-modal-container animate__animated animate__fadeIn">
+                <div class="ls-search-header">
+                    <div class="titleBox">
+                        <a href="#" class="back"><i class="bi bi-arrow-left"></i>back to shop</a>
+                        <div class="ls-search-title">Search Results</div>
+                        <p class="search-reasult-data">0 results for "crushed"</p>
+                    </div>
+                    <form class="searchform" style="gap:0.5rem;">
+                        <input type="text" class="ls-search-input" placeholder="search products...">
+                        <button type="submit" class="btn btn-light"><i class="bi bi-search"></i></button>
+                    </form>
+                </div>
+                <div class="ls-search-result-box">
+                    <span class="ls-search-icon"><i class="bi bi-search"></i></span>
+                    <div class="ls-search-no-title">No products found</div>
+                    <div class="ls-search-no-desc">We couldn't find any products matching "crushed". Try checking for
+                        typos
+                        or using different keywords like "rocks", "mulch", or "sand".</div>
+                    <button class="ls-btn-viewall" type="button">View All Products</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Main Content -->
     <main class="main-content">
         <section class="hero">
