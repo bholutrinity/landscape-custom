@@ -8,19 +8,38 @@
   background-position: center;
   color: #ffffff;
   overflow: hidden;
-
+  &.inner-aboutus {
+    background-image: none;
+    background-color: #fff;
+    h2 {
+      color: #1f2225;
+    }
+    .au-content {
+      .au-text {
+        color: #1f2225;
+      }
+      .au-list {
+        li {
+          color: #1f2225;
+        }
+      }
+      .au-note {
+        color: #1f2225;
+      }
+    }
+  }
   .au-image-wrap {
     position: relative;
     width: 100%;
-    min-height: 600px;
+    min-height: clamp(18.75rem, 15rem + 18.75vw, 37.5rem);
+
     &::before {
       position: absolute;
       content: "";
       top: 0;
-      left: -50px;
-      width: 200px;
+      left: clamp(-0.3125rem, 0.25rem + -2.8125vw, -3.125rem);
+      width: clamp(0.625rem, -1.75rem + 11.875vw, 12.5rem);
       height: 100%;
-
       background-color: $title-color;
     }
     .au-img {
@@ -154,8 +173,7 @@
   /* RESPONSIVE */
   @media (max-width: 991px) {
     .au-image-wrap {
-      margin-bottom: 80px;
-
+      margin-bottom: clamp(0.3125rem, -1.923rem + 11.1773vw, 5rem);
       .au-img-bottom {
         left: 0;
       }
@@ -167,8 +185,7 @@
   }
 
   @media (max-width: 576px) {
-    padding: 70px 0;
-
+    padding: 10px 0;
     .au-content h2 {
       font-size: 28px;
     }

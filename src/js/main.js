@@ -6,8 +6,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const searchModal = document.getElementById("lsSearchModal");
 
   // Header icon triggers
-  const profileIcon = document.querySelector('.header-icons [aria-label="Profile"]');
-  const searchIcon = document.querySelector('.header-icons [aria-label="Search"]');
+  const profileIcon = document.querySelector(
+    '.header-icons [aria-label="Profile"]',
+  );
+  const searchIcon = document.querySelector(
+    '.header-icons [aria-label="Search"]',
+  );
 
   // Modal switch links
   const showSignup = document.getElementById("lsShowSignup");
@@ -15,64 +19,70 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Utility: open/close modal
   function openModal(modal) {
-    [loginModal, signupModal, searchModal].forEach(m => m.classList.add('d-none'));
-    modal.classList.remove('d-none');
-    document.body.classList.add('ls-modal-open');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    [loginModal, signupModal, searchModal].forEach((m) =>
+      m.classList.add("d-none"),
+    );
+    modal.classList.remove("d-none");
+    document.body.classList.add("ls-modal-open");
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }
   function closeAllModals() {
-    [loginModal, signupModal, searchModal].forEach(m => m.classList.add('d-none'));
-    document.body.classList.remove('ls-modal-open');
+    [loginModal, signupModal, searchModal].forEach((m) =>
+      m.classList.add("d-none"),
+    );
+    document.body.classList.remove("ls-modal-open");
   }
 
   // Open Login
   if (profileIcon) {
-    profileIcon.addEventListener('click', function (e) {
+    profileIcon.addEventListener("click", function (e) {
       e.preventDefault();
       openModal(loginModal);
     });
   }
   // Open Search
   if (searchIcon) {
-    searchIcon.addEventListener('click', function (e) {
+    searchIcon.addEventListener("click", function (e) {
       e.preventDefault();
       openModal(searchModal);
     });
   }
   // Switch to Signup
   if (showSignup) {
-    showSignup.addEventListener('click', function (e) {
+    showSignup.addEventListener("click", function (e) {
       e.preventDefault();
       openModal(signupModal);
     });
   }
   // Switch to Login
   if (showLogin) {
-    showLogin.addEventListener('click', function (e) {
+    showLogin.addEventListener("click", function (e) {
       e.preventDefault();
       openModal(loginModal);
     });
   }
 
   // ESC key closes modals
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') closeAllModals();
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") closeAllModals();
   });
 
   // Click outside modal card closes modal
-  [loginModal, signupModal, searchModal].forEach(modal => {
+  [loginModal, signupModal, searchModal].forEach((modal) => {
     if (!modal) return;
-    modal.addEventListener('mousedown', function (e) {
+    modal.addEventListener("mousedown", function (e) {
       if (e.target === modal) closeAllModals();
     });
   });
 
   // Prevent form submit (demo only)
-  document.querySelectorAll('.ls-modal-form, .ls-signup-form').forEach(form => {
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
+  document
+    .querySelectorAll(".ls-modal-form, .ls-signup-form")
+    .forEach((form) => {
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+      });
     });
-  });
 });
 /* Sample custom JavaScript file */
 document.addEventListener("DOMContentLoaded", function () {
@@ -235,4 +245,21 @@ $(document).ready(function () {
 
   toggleOwl();
   $(window).on("resize", toggleOwl);
+});
+// filter
+// Filter Modal for Mobile
+document.addEventListener("DOMContentLoaded", function () {
+  var openFilterBtn = document.getElementById("openFilterModal");
+  var filterModal = new bootstrap.Modal(document.getElementById("filterModal"));
+  if (openFilterBtn) {
+    openFilterBtn.addEventListener("click", function () {
+      // Clone sidebar filters into modal
+      var sidebar = document.getElementById("lsShopFilters");
+      var modalContent = document.getElementById("modalFiltersContent");
+      if (sidebar && modalContent) {
+        modalContent.innerHTML = sidebar.innerHTML;
+      }
+      filterModal.show();
+    });
+  }
 });

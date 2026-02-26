@@ -5,9 +5,9 @@
 .ls-breadcrumb-hero {
   position: relative;
   width: 100%;
-  min-height: 180px;
-  background: #222 url("../../assets/images/aboutus/about-hero.jpg")
-    center/cover no-repeat;
+  min-height: clamp(10rem, 3.3478rem + 13.8768vw, 20rem);
+  background: #222 url("../assets/images/innerbanner.webp") center/cover
+    no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -19,7 +19,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(34, 34, 34, 0.45);
+  background: rgba(#000000, 0.7);
   z-index: 2;
 }
 .ls-breadcrumb-hero-content {
