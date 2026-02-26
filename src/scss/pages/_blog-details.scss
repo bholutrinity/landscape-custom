@@ -1,0 +1,43 @@
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
+
+.blog-details-page {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  .blog-details {
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    padding: 2rem;
+
+    img {
+      border-radius: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .blog-meta {
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .blog-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .blog-content {
+      font-size: 1.1rem;
+
+      line-height: 1.7;
+      img {
+        margin: 1.5rem 0;
+        border-radius: 0.75rem;
+      }
+      p {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+}

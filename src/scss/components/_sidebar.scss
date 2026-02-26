@@ -1,0 +1,124 @@
+.blog-sidebar {
+  .sidebar-section {
+    background: #82654310;
+    border-radius: 5px;
+    padding: 25px;
+    margin-bottom: 2rem;
+    input {
+      background: transparent;
+      outline: none;
+      border: none;
+      & :focus {
+        box-shadow: none;
+      }
+      &.form-control {
+        box-shadow: none;
+      }
+    }
+    button {
+      background-color: #826543;
+      border-radius: 5px;
+    }
+  }
+
+  .sidebar-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  .categories-list {
+    li {
+      margin-bottom: 0.75rem;
+      a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #82654310;
+        font-weight: 500;
+        text-decoration: none;
+        padding: 15px;
+        border-bottom: 1px solid #f8f9fa;
+
+        i {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  .latest-posts {
+    li {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+      .latest-thumb {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: 0.5rem;
+      }
+      .latest-title {
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 0.25rem;
+      }
+      .latest-meta {
+        font-size: 0.85rem;
+      }
+    }
+  }
+
+  .promo-card {
+    position: relative;
+    img {
+      border-radius: 1rem;
+      width: 100%;
+      height: auto;
+    }
+  }
+  .blogContact {
+    display: flex;
+    flex-flow: row wrap;
+    img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1/ 1;
+    }
+    .contactbgcontent {
+      display: flex;
+      flex-flow: column wrap;
+      background-image: url("../../../src/assets/images/blog/contactbg.webp");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      padding: 40px;
+      color: #000000;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin: -30px 30px 30px 30px;
+      .icon {
+        background: #000;
+        color: #fff;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.1rem;
+      }
+      .title {
+        font-weight: 700;
+        font-size: 24px;
+        text-align: center;
+      }
+      .call {
+      }
+      font-size: 20px;
+      color: #000000;
+      text-align: center;
+    }
+  }
+}

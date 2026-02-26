@@ -1,0 +1,42 @@
+.blog-card {
+  margin-bottom: 2rem;
+
+  img {
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .blog-meta {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .blog-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    a {
+      font-size: clamp(1.625rem, 1.3755rem + 0.5204vw, 2rem);
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .blog-desc {
+    margin-bottom: 1rem;
+    font-size: clamp(1rem, 0.8337rem + 0.3469vw, 1.25rem);
+  }
+
+  .btn-brown {
+    color: #fff;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    font-weight: 600;
+    background-color: #826543;
+    width: fit-content;
+    &:hover {
+      background-color: #96b700;
+    }
+  }
+}

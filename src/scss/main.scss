@@ -30,6 +30,10 @@
 @use "components/forms";
 @use "components/modals";
 @use "components/breadcrumb-hero";
+
+@use "components/blog-card";
+@use "components/search-box";
+@use "components/sidebar";
 // Page-Specific Styles
 @use "pages/home";
 @use "pages/aboutus/aboutinner";
@@ -38,3 +42,5 @@
 @use "components/search-modal";
 // Use shop page styles
 @use "pages/shop";
+@use "pages/blog-list";
+@use "pages/blog-details";
