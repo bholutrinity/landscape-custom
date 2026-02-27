@@ -10,16 +10,179 @@
   <link rel="stylesheet" href="../scss/main.css">
 </head>
 
-<body>
+<body><!-- Header Navigation -->
+  <header class="main-header">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+
+        <!-- Logo -->
+        <a class="navbar-brand logo" href="index.html">Landscape</a>
+
+        <!-- Mobile Toggle -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+          aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Content -->
+        <div class="collapse navbar-collapse justify-content-between" id="mainNavbar">
+
+          <!-- Center Menu -->
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link " href="index.html">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link " href="shop.html">Shop</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="gardenDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Garden Supplies
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Plants</a></li>
+                <li><a class="dropdown-item" href="#">Tools</a></li>
+                <li><a class="dropdown-item" href="#">Fertilizers</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" href="blog.html">Blog</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link " href="contactus.html">Contact Us</a>
+            </li>
+          </ul>
+
+          <!-- Right Icons -->
+          <div class="header-icons d-flex align-items-center">
+            <a href="#" class="icon-btn" aria-label="Search">
+              <i class="bi bi-search"></i>
+            </a>
+
+            <a href="#" class="icon-btn" aria-label="Wishlist">
+              <i class="bi bi-heart"></i>
+            </a>
+
+            <a href="#" class="icon-btn" aria-label="Cart">
+              <i class="bi bi-bag"></i>
+            </a>
+
+            <a href="#" class="icon-btn" aria-label="Profile">
+              <i class="bi bi-person"></i>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- LOGIN MODAL -->
+  <div id="lsLoginModal" class="ls-modal-bg d-none">
+    <div class="ls-modal-card animate__animated animate__fadeIn">
+      <div class="ls-modal-title">Welcome Back to Landscape</div>
+      <p class="ls-modal-subtitle">Sign in to your Landscape account to continue</p>
+      <form class="ls-modal-form">
+        <label class="form-label" for="loginEmail">Email Address</label>
+        <input type="email" class="form-control" id="loginEmail" placeholder="john@email.com" autocomplete="username">
+        <label class="form-label" for="loginPassword">Password</label>
+        <input type="password" class="form-control" id="loginPassword" placeholder="Enter Your Password"
+          autocomplete="current-password">
+        <a href="#" class="ls-modal-link" id="lsForgotPassword">Forgot Password?</a>
+        <button type="submit" class="ls-btn-primary w-100">Sign In</button>
+      </form>
+      <div class="ls-modal-divider">OR SIGN IN WITH</div>
+      <button class="ls-btn-google w-100" type="button"><img src="https://www.svgrepo.com/show/475656/google-color.svg"
+          alt="Google" width="20" height="20">
+        Google</button>
+      <div class="ls-modal-footer">Don't have an account? <a href="#" id="lsShowSignup">Sign up for free</a></div>
+      <div class="ls-modal-terms">By signing in, you agree to our <a href="#">Terms of Service</a> and <a
+          href="#">Privacy Policy</a></div>
+    </div>
+  </div>
+
+  <!-- SIGNUP MODAL -->
+  <div id="lsSignupModal" class="ls-signup-modal-bg d-none">
+    <div class="ls-signup-modal-card animate__animated animate__fadeIn">
+      <div class="ls-signup-title">Create an Account</div>
+      <p class="discription-p">Join Landscape to start shopping premium Garden supplies</p>
+      <form class="ls-signup-form">
+        <label class="form-label" for="signupName">Full Name</label>
+        <input type="text" class="form-control" id="signupName" placeholder="John Doe" autocomplete="name">
+        <label class="form-label" for="signupEmail">Email Address</label>
+        <input type="email" class="form-control" id="signupEmail" placeholder="johndoe@gmail.com" autocomplete="email">
+        <label class="form-label" for="signupPassword">Password</label>
+        <input type="password" class="form-control" id="signupPassword" placeholder="Create Strong Password"
+          autocomplete="new-password">
+        <label class="form-label" for="signupConfirm">Confirm Password</label>
+        <input type="password" class="form-control" id="signupConfirm" placeholder="Re-enter your password"
+          autocomplete="new-password">
+        <div class="ls-signup-checkbox">
+          <input type="checkbox" id="signupTerms" required>
+          <label for="signupTerms">I agree to terms of service and privacy policy</label>
+        </div>
+        <button type="submit" class="ls-btn-primary w-100">Create Account</button>
+      </form>
+      <div class="ls-signup-divider">Or sign up with</div>
+      <button class="ls-btn-google w-100" type="button"><img src="https://www.svgrepo.com/show/475656/google-color.svg"
+          alt="Google" width="20" height="20">
+        Google</button>
+      <div class="ls-signup-footer">Already have an account? <a href="#" id="lsShowLogin">Sign In</a></div>
+      <div class="ls-signup-terms">By signing up, you agree to our <a href="#">Terms of Service</a> and <a
+          href="#">Privacy Policy</a></div>
+    </div>
+  </div>
+
+  <!-- SEARCH RESULT MODAL -->
+  <div id="lsSearchModal" class="ls-search-modal-bg d-none">
+    <div class="container">
+      <div class="ls-search-modal-container animate__animated animate__fadeIn">
+        <div class="ls-search-header">
+          <div class="titleBox">
+            <a href="#" class="back"><i class="bi bi-arrow-left"></i>back to shop</a>
+            <div class="ls-search-title">Search Results</div>
+            <p class="search-reasult-data">0 results for "crushed"</p>
+          </div>
+          <form class="searchform" style="gap:0.5rem;">
+            <input type="text" class="ls-search-input" placeholder="search products...">
+            <button type="submit" class="btn btn-light"><i class="bi bi-search"></i></button>
+          </form>
+        </div>
+        <div class="ls-search-result-box">
+          <span class="ls-search-icon"><i class="bi bi-search"></i></span>
+          <div class="ls-search-no-title">No products found</div>
+          <div class="ls-search-no-desc">We couldn't find any products matching "crushed". Try checking for
+            typos
+            or using different keywords like "rocks", "mulch", or "sand".</div>
+          <button class="ls-btn-viewall" type="button">View All Products</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="ls-breadcrumb-hero">
+    <div class="ls-breadcrumb-hero-content">
+      <div class="ls-breadcrumb-hero-title">Blog</div>
+      <div class="ls-breadcrumb-hero-breadcrumb">Home <span class="text-success">/</span> Blog</div>
+    </div>
+  </section>
   <!-- Main Content -->
   <main class="blog-details-page py-5">
+
     <div class="container">
       <div class="row">
         <!-- Blog Content Column -->
         <div class="col-lg-8 mb-4 mb-lg-0">
           <article class="blog-details">
-            <img src="../assets/images/aboutus/blog-feature-1.jpg" alt="Blog Featured"
-              class="img-fluid rounded w-100 mb-4">
+            <img src="../assets/images/blog/blog11.webp" alt="Blog Featured" class="img-fluid rounded w-100 mb-4">
             <div class="blog-meta mb-2">
               <span class="me-3"><i class="bi bi-person"></i> By Admin</span>
               <span><i class="bi bi-calendar"></i> 25 April,2025</span>
@@ -30,13 +193,13 @@
                 Epoxy tables are a beautiful addition to any home. Calculating the right amount of epoxy is crucial for
                 a perfect finish. Here’s how you can do it:
               </p>
-              <img src="../assets/images/aboutus/epoxy-step.jpg" alt="Epoxy Step" class="img-fluid rounded mb-4">
+              <img src="../assets/images/blog1.webp" alt="Epoxy Step" class="img-fluid rounded mb-4">
               <p>
                 <strong>Step 1:</strong> Measure the length, width, and depth of the area to be filled.<br>
                 <strong>Step 2:</strong> Multiply these values to get the volume.<br>
                 <strong>Step 3:</strong> Convert the volume to liters or gallons as needed.
               </p>
-              <img src="../assets/images/aboutus/epoxy-result.jpg" alt="Epoxy Result" class="img-fluid rounded mb-4">
+              <img src="../assets/images/blog2.webp" alt="Epoxy Result" class="img-fluid rounded mb-4">
               <p>
                 Always order a little extra to account for spillage and air bubbles. For more tips, consult with our
                 professionals.
@@ -69,7 +232,7 @@
             <h5 class="sidebar-title mb-3">Latest Post</h5>
             <ul class="latest-posts list-unstyled">
               <li class="d-flex mb-3">
-                <img src="../assets/images/aboutus/latest-1.jpg" alt="Latest Post" class="latest-thumb me-3 rounded">
+                <img src="../assets/images/blog/blog11.webp" alt="Latest Post" class="latest-thumb me-3 rounded">
                 <div>
                   <a href="blog-details.html" class="latest-title fw-bold text-dark">Lorem ipsum dolor sit amet,
                     consectetur adipiscing elit,</a>
@@ -77,7 +240,7 @@
                 </div>
               </li>
               <li class="d-flex mb-3">
-                <img src="../assets/images/aboutus/latest-2.jpg" alt="Latest Post" class="latest-thumb me-3 rounded">
+                <img src="../assets/images/blog/blog22.webp" alt="Latest Post" class="latest-thumb me-3 rounded">
                 <div>
                   <a href="blog-details.html" class="latest-title fw-bold text-dark">Lorem ipsum dolor sit amet,
                     consectetur adipiscing elit,</a>
@@ -85,7 +248,7 @@
                 </div>
               </li>
               <li class="d-flex mb-3">
-                <img src="../assets/images/aboutus/latest-3.jpg" alt="Latest Post" class="latest-thumb me-3 rounded">
+                <img src="../assets/images/blog3.webp" alt="Latest Post" class="latest-thumb me-3 rounded">
                 <div>
                   <a href="blog-details.html" class="latest-title fw-bold text-dark">Lorem ipsum dolor sit amet,
                     consectetur adipiscing elit,</a>
@@ -95,19 +258,97 @@
             </ul>
           </div>
           <!-- Promo / Consultation Card -->
-          <div class="sidebar-section promo-card position-relative rounded overflow-hidden">
-            <img src="../assets/images/aboutus/promo.jpg" alt="Consultation" class="img-fluid w-100">
-            <div
-              class="promo-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center">
-              <div class="promo-text text-white text-center mb-2">Consult with a Professional</div>
-              <div class="promo-subtext text-white mb-3">Call: 111 221-1315<br>Contact us in case of emergency</div>
-              <a href="contactus.html" class="btn btn-light">Contact Us</a>
+          <div class="blogContact">
+            <img src="../assets/images/blog/blogcontact.webp" alt="Consultation" class="img-fluid w-100">
+            <div class="contactbgcontent">
+              <div class="icon"><i class="bi bi-telephone-outbound"></i></div>
+              <div class="title">Consult with a Professional</div>
+              <div class="call">111 221-1315 <br>Contact us in case of emergency</div>
             </div>
           </div>
         </aside>
       </div>
     </div>
   </main>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-3 col-md-6 col-sm-12 mb-3 ">
+          <div class="c-info">
+            <div class="company-logo">Landscap </div>
+            <p>Lorem ipsum dolor sit consectetur adipiscing elit, Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit, it consectetur adipiscing elit, Lorem ipsum dolor sit </p>
+            <ul class="sociallist">
+              <li><a href="#" class="text-white-50"><i class="bi bi-facebook"></i></a></li>
+              <li><a href="#" class="text-white-50"><i class="bi bi-twitter"></i></a></li>
+              <li><a href="#" class="text-white-50"><i class="bi bi-instagram"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-xl-3 col-md-6 col-sm-12 footer-col is-collapsible">
+          <div class="c-info">
+            <div class="footer-title">Garden Supplies <span class="ft-toggle"><i class="bi bi-plus"></i></span></div>
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-white-50">Soils</a></li>
+              <li><a href="#" class="text-white-50">Sands</a></li>
+              <li><a href="#" class="text-white-50">Limestones</a></li>
+              <li><a href="#" class="text-white-50">Cement</a></li>
+              <li><a href="#" class="text-white-50">Manure</a></li>
+              <li><a href="#" class="text-white-50">Tools and Accessories</a></li>
+              <li><a href="#" class="text-white-50">River Rocks</a></li>
+              <li><a href="#" class="text-white-50">Ground Covers</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-xl-3 col-md-6 col-sm-12 footer-col is-collapsible">
+          <div class="c-info">
+            <div class="footer-title">Other Links <span class="ft-toggle"><i class="bi bi-plus"></i></span>
+            </div>
+            <ul class="list-unstyled">
+              <li><a href="index.html" class="text-white-50">Home</a></li>
+              <li><a href="about.html" class="text-white-50">About Us</a></li>
+              <li><a href="#" class="text-white-50">Testimonials</a></li>
+              <li><a href="#" class="text-white-50">Blogs</a></li>
+              <li><a href="#" class="text-white-50">Shop</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-xl-3 col-md-6 col-sm-12 mb-3footer-col is-collapsible">
+          <div class="c-info">
+            <div class="footer-title">Contact <span class="ft-toggle"><i class="bi bi-plus"></i></span>
+            </div>
+            <ul class="ls-contact-list">
+              <li>
+                <div class="icon"><i class="bi bi-envelope-open"></i></div>
+                <div class="title">Info@landscap.com.au</div>
+              </li>
+              <li>
+                <div class="icon"><i class="bi bi-telephone-outbound"></i></div>
+                <div class="title">012 123 1234</div>
+              </li>
+              <li>
+                <div class="icon"><i class="bi bi-geo-alt"></i></div>
+                <div class="title">123 Mackay Bucasia Rd, Bucasia QLD 4740</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <div class="text-center">
+        <p class="mb-0">&copy; 2026 landscape All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/main.js"></script>
+
 </body>
 
 </html>

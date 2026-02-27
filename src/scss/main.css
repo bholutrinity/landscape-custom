@@ -1832,7 +1832,7 @@ textarea.form-control:disabled {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  margin: -30px 30px 30px 30px;
+  margin: -200px 30px 30px 30px;
 }
 .blog-sidebar .blogContact .contactbgcontent .icon {
   background: #000;
@@ -3492,9 +3492,6 @@ textarea.form-control:disabled {
 }
 .blog-details-page .blog-details {
   background: #fff;
-  border-radius: 1rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-  padding: 2rem;
 }
 .blog-details-page .blog-details img {
   border-radius: 1rem;
