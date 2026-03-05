@@ -1,0 +1,16 @@
+// Bootstrap grid overrides and helpers
+.container {
+  max-width: $container-max;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+}
+[class*="col-"] {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}

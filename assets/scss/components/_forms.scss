@@ -1,0 +1,31 @@
+// Form styles
+.form-group {
+  margin-bottom: 1.25rem;
+}
+label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+input, select, textarea {
+  width: 100%;
+  padding: 0.7em 1em;
+  border: 1px solid $color-border;
+  border-radius: $radius;
+  background: $color-bg;
+  font-size: 1rem;
+  @include transition(border-color);
+  &:focus {
+    border-color: $color-primary;
+    outline: none;
+  }
+}
+input[type="radio"], input[type="checkbox"] {
+  width: auto;
+  margin-right: 0.5em;
+}
+.form-error {
+  color: $color-danger;
+  font-size: 0.97em;
+  margin-top: 0.25em;
+}

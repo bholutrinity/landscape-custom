@@ -1,0 +1,255 @@
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
+
+/* ===================================
+   ORDER HISTORY PAGE
+=================================== */
+
+.order-history {
+  @include fade-in;
+  padding: 2.5rem 0 3rem;
+
+  .cardTitle {
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+
+  /* ================= HEADER ================= */
+
+  .history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+
+    .filter-group {
+      display: flex;
+      gap: 1rem;
+
+      select {
+        min-width: 150px;
+        padding: 10px 15px;
+        border: 1px solid #00000030;
+        border-radius: $radius;
+        background: #fff;
+        font-size: 0.9rem;
+        cursor: pointer;
+
+        &:focus {
+          outline: none;
+          border-color: $color-primary;
+        }
+      }
+    }
+  }
+
+  /* ================= TABLE ================= */
+
+  .history-table {
+    overflow-x: auto;
+    border-radius: $radius;
+
+    .table {
+      width: 100%;
+      min-width: 700px;
+      border-collapse: collapse;
+
+      thead {
+        background: $color-secondary;
+
+        th {
+          padding: 14px 16px;
+          text-align: left;
+          font-weight: 600;
+          font-size: 0.95rem;
+          color: $color-primary;
+        }
+      }
+
+      tbody {
+        tr {
+          border-bottom: 1px solid #eeeeee;
+
+          &:hover {
+            background: #fafafa;
+          }
+
+          td {
+            padding: 14px 16px;
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+  }
+
+  /* ================= STATUS BADGES ================= */
+
+  .order-status {
+    padding: 6px 12px;
+    border-radius: 30px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    display: inline-block;
+
+    &.pending {
+      background: #fff3cd;
+      color: #856404;
+    }
+
+    &.shipped {
+      background: #cce5ff;
+      color: #004085;
+    }
+
+    &.delivered {
+      background: #d4edda;
+      color: #155724;
+    }
+
+    &.cancelled {
+      background: #f8d7da;
+      color: #721c24;
+    }
+  }
+
+  /* ================= BUTTON ================= */
+
+  .btn-invoice {
+    padding: 6px 14px;
+    font-size: 0.8rem;
+  }
+
+  /* ================= PAGINATION ================= */
+
+  .pagination {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+
+    .page-item {
+      .page-link {
+        display: block;
+        padding: 0.5em 1.1em;
+        border-radius: $radius;
+        background: $color-secondary;
+        color: $color-primary;
+        font-weight: 600;
+        text-decoration: none;
+
+        @include transition(all);
+
+        &:hover,
+        &.active {
+          background: $color-primary;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+/* ===================================
+   INVOICE MODAL
+=================================== */
+
+#invoiceModal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    opacity: 0;
+    @include transition(all);
+  }
+
+  .modal-dialog {
+    position: relative;
+    width: 100%;
+    max-width: 520px;
+    margin: 80px auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: $radius;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+    transform: translateY(-30px);
+    opacity: 0;
+    @include transition(all);
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    font-size: 26px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: $color-primary;
+
+    @include transition(all);
+
+    &:hover {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+#invoiceModal.open {
+  display: block;
+
+  &::before {
+    opacity: 1;
+  }
+
+  .modal-dialog {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ===================================
+   RESPONSIVE
+=================================== */
+
+@media (max-width: 991px) {
+  .order-history {
+    padding: 2rem 0;
+
+    .history-table .table {
+      min-width: 600px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .order-history {
+    padding: 1.2rem 0 2rem;
+
+    .history-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .pagination {
+      justify-content: center;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  #invoiceModal .modal-dialog {
+    margin: 60px 15px;
+    padding: 1.5rem;
+  }
+}

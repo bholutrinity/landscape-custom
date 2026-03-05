@@ -1,0 +1,35 @@
+// Wishlist Page Styles
+.wishlist {
+  @include fade-in;
+  padding: 2.5rem 0 3rem;
+  .wishlist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+  }
+  .wishlist-card {
+    @include card;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    .card-img { width: 100%; height: 180px; object-fit: cover; border-radius: $radius; margin-bottom: 1rem; }
+    .card-title { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem; }
+    .card-price { color: $color-primary; font-weight: 600; font-size: 1.05rem; }
+    .wishlist-actions {
+      display: flex;
+      gap: 0.7rem;
+      margin-top: 1rem;
+      .btn { min-width: 110px; }
+    }
+  }
+  .wishlist-empty {
+    text-align: center;
+    color: $color-muted;
+    font-size: 1.1rem;
+    margin-top: 3rem;
+  }
+}
+@media (max-width: 767px) {
+  .wishlist { padding: 1.2rem 0 2rem; }
+  .wishlist-card { padding: 1rem; }
+}

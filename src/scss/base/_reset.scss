@@ -34,7 +34,11 @@ figure {
     margin-bottom: 0;
   }
 }
-
+.cardTitle {
+  font-size: clamp(1rem, 0.5011rem + 1.0408vw, 1.75rem);
+  font-weight: 600;
+  margin-bottom: 15px;
+}
 // Image Defaults
 img {
   max-width: 100%;

@@ -1,0 +1,33 @@
+// Table styles
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: $color-bg;
+  border-radius: $radius;
+  overflow: hidden;
+  box-shadow: $shadow;
+  th, td {
+    padding: 1rem 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid $color-border;
+    vertical-align: middle;
+  }
+  th {
+    background: $color-secondary;
+    font-weight: 600;
+    color: $color-text;
+    border-bottom: 2px solid $color-border;
+  }
+  tr:last-child td {
+    border-bottom: none;
+  }
+}
+.table-actions {
+  display: flex;
+  gap: 0.5rem;
+  .btn {
+    padding: 0.4em 0.9em;
+    font-size: 1rem;
+  }
+}

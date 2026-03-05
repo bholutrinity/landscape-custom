@@ -1,0 +1,108 @@
+// Cart Page Styles
+.cart {
+  @include fade-in;
+  padding: 2.5rem 0 3rem;
+  .cart-table {
+    margin-bottom: 2rem;
+    .table {
+      min-width: 700px;
+      th, td { vertical-align: middle; }
+      .cart-product {
+        display: flex;
+        align-items: center;
+        gap: 1.1rem;
+        .cart-img {
+          width: 56px; height: 56px;
+          border-radius: $radius;
+          overflow: hidden;
+          background: $color-secondary;
+        }
+        .cart-info {
+          .cart-title { font-weight: 600; }
+          .cart-meta { font-size: 0.97em; color: $color-muted; }
+        }
+      }
+      .cart-qty {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        .qty-btn {
+          width: 2.1em; height: 2.1em;
+          border: 1px solid $color-border;
+          background: $color-secondary;
+          color: $color-primary;
+          border-radius: $radius;
+          font-size: 1.1em;
+          @include transition(all);
+          &:hover { background: $color-primary; color: #fff; }
+        }
+        .qty-input {
+          width: 2.5em;
+          text-align: center;
+          border: none;
+          background: transparent;
+          font-size: 1.1em;
+        }
+      }
+      .cart-remove {
+        .btn {
+          background: $color-danger;
+          color: #fff;
+          border-radius: 50%;
+          width: 2.1em; height: 2.1em;
+          padding: 0;
+          font-size: 1.1em;
+          @include transition(all);
+          &:hover { background: darken($color-danger, 10%); }
+        }
+      }
+    }
+  }
+  .cart-summary {
+    @include card;
+    max-width: 340px;
+    margin-left: auto;
+    .summary-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1.1rem;
+      font-size: 1.05em;
+      &.total {
+        font-weight: 700;
+        font-size: 1.15em;
+      }
+    }
+    .shipping {
+      margin-bottom: 1.1rem;
+      .form-group { margin-bottom: 0.7rem; }
+    }
+    .btn {
+      width: 100%;
+      margin-top: 1.2rem;
+    }
+  }
+  .cart-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    .coupon-input {
+      flex: 1;
+      min-width: 180px;
+    }
+    .btn {
+      min-width: 140px;
+    }
+  }
+}
+@media (max-width: 991px) {
+  .cart-table .table { min-width: 520px; }
+  .cart-summary { max-width: 100%; margin: 2rem 0 0; }
+}
+@media (max-width: 767px) {
+  .cart {
+    padding: 1.2rem 0 2rem;
+    .cart-table { overflow-x: auto; }
+    .cart-summary { padding: 1.2rem; }
+    .cart-actions { flex-direction: column; gap: 0.7rem; }
+  }
+}

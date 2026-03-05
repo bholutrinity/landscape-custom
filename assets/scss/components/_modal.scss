@@ -1,0 +1,29 @@
+// Modal styles
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0; right: 0; bottom: 0;
+  background: rgba(34,34,34,0.18);
+  @include flex-center;
+  &.open { display: flex; }
+  .modal-dialog {
+    background: $color-bg;
+    border-radius: $radius;
+    box-shadow: $shadow;
+    max-width: 420px;
+    width: 100%;
+    padding: 2rem 1.5rem;
+    position: relative;
+    @include fade-in;
+  }
+  .modal-close {
+    position: absolute;
+    top: 1rem; right: 1rem;
+    font-size: 1.3rem;
+    color: $color-muted;
+    cursor: pointer;
+    @include transition(color);
+    &:hover { color: $color-danger; }
+  }
+}

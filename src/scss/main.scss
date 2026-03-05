@@ -41,6 +41,15 @@
 @use "components/signup-modal";
 @use "components/search-modal";
 // Use shop page styles
+
 @use "pages/shop";
 @use "pages/blog-list";
 @use "pages/blog-details";
+@use "pages/product/index";
+
+// E-commerce pages
+@use "pages/cart";
+@use "pages/checkout";
+@use "pages/wishlist";
+@use "pages/orders";
+@use "pages/order-history";

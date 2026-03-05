@@ -1,0 +1,111 @@
+// Material Calculator Section Styles
+.material-calculator-section {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  margin-bottom: 1.5rem;
+  .calc-title {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 0.7rem;
+    color: #222;
+  }
+  .calc-form {
+    .form-label {
+      font-weight: 500;
+      color: #7c5c3b;
+      margin-bottom: 0.3rem;
+    }
+    .form-control,
+    .form-select {
+      border-radius: 6px;
+      border: 1px solid #e5e5e5;
+      background: #faf9f7;
+      font-size: 1rem;
+      color: #222;
+      transition: border 0.2s;
+      &:focus {
+        border-color: #7c5c3b;
+        box-shadow: 0 2px 8px rgba(124, 92, 59, 0.07);
+      }
+    }
+    .btn-calc {
+      background: #7c5c3b;
+      color: #fff;
+      border-radius: 8px;
+      font-size: 1.08rem;
+      transition:
+        box-shadow 0.2s,
+        transform 0.18s;
+      box-shadow: 0 2px 8px rgba(124, 92, 59, 0.07);
+      &:hover,
+      &:focus {
+        background: #6a4e2e;
+        box-shadow: 0 6px 24px rgba(124, 92, 59, 0.13);
+        transform: translateY(-2px) scale(1.04);
+      }
+      &:active {
+        transform: scale(0.97);
+      }
+    }
+    .btn-reset {
+      background: #f3ede7;
+      color: #7c5c3b;
+      border-radius: 8px;
+      font-size: 1.08rem;
+      transition:
+        background 0.2s,
+        color 0.2s;
+      &:hover,
+      &:focus {
+        background: #e5d7c6;
+        color: #6a4e2e;
+      }
+    }
+  }
+  .calc-results {
+    background: #f8f6f3;
+    border: 1.5px dashed #e5e5e5;
+    border-radius: 10px;
+    padding: 1.5rem 1.2rem;
+    min-height: 180px;
+    color: #222;
+    font-size: 1.05rem;
+    height: 100%;
+    .result-label {
+      color: #7c5c3b;
+      font-weight: 600;
+      margin-right: 0.5rem;
+    }
+    .result-value {
+      font-weight: 700;
+      color: #222;
+    }
+    .result-cost {
+      color: #4bb543;
+      font-weight: 700;
+      font-size: 1.13rem;
+    }
+    .result-note {
+      font-size: 0.93rem;
+      color: #888;
+      margin-top: 0.7rem;
+    }
+  }
+
+  @media (max-width: 991.98px) {
+    .calc-row {
+      flex-direction: column;
+    }
+    .calc-results {
+      margin-top: 1.2rem;
+    }
+  }
+}
+// Fade-in for results
+.calc-results.fade-in {
+  animation: fadeInUp 0.7s cubic-bezier(0.4, 0, 0.2, 1) 0.1s forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}

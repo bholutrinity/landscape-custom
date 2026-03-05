@@ -1,0 +1,42 @@
+// Button styles
+.btn {
+  display: inline-block;
+  padding: 0.65em 1.5em;
+  border: none;
+  border-radius: $radius;
+  background: $color-primary;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  @include transition(all);
+  box-shadow: 0 2px 8px rgba(122,92,54,0.08);
+  position: relative;
+  overflow: hidden;
+  &:hover, &:focus {
+    background: darken($color-primary, 7%);
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 4px 16px rgba(122,92,54,0.13);
+  }
+  &:active {
+    transform: scale(0.98);
+  }
+}
+.btn-secondary {
+  background: $color-accent;
+  color: $color-primary;
+  &:hover { background: lighten($color-accent, 7%); }
+}
+.btn-danger {
+  background: $color-danger;
+  &:hover { background: darken($color-danger, 7%); }
+}
+.btn-outline {
+  background: transparent;
+  color: $color-primary;
+  border: 1.5px solid $color-primary;
+  &:hover {
+    background: $color-primary;
+    color: #fff;
+  }
+}

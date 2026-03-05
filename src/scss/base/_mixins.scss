@@ -159,3 +159,31 @@
     display: none;
   }
 }
+// SCSS Mixins
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin transition($props...) {
+  transition: $props $transition;
+}
+@mixin card {
+  background: $color-bg;
+  border-radius: $radius;
+  box-shadow: $shadow;
+  padding: $spacer;
+}
+@mixin fade-in {
+  animation: fadeIn 0.7s ease;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}

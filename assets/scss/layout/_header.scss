@@ -1,0 +1,31 @@
+// Header styles (copy markup from index.html)
+.header {
+  background: $color-bg;
+  border-bottom: 1px solid $color-border;
+  @include transition(all);
+  .header-inner {
+    max-width: $container-max;
+    margin: 0 auto;
+    padding: $spacer 0;
+    @include flex-center;
+    justify-content: space-between;
+  }
+  .header-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $color-primary;
+  }
+  .header-icons {
+    display: flex;
+    gap: 1.5rem;
+    .icon {
+      font-size: 1.3rem;
+      color: $color-text;
+      cursor: pointer;
+      @include transition(color);
+      &:hover {
+        color: $color-primary;
+      }
+    }
+  }
+}

@@ -1,0 +1,82 @@
+// Checkout Page Styles
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
+.checkout {
+  @include fade-in;
+  padding: 2.5rem 0 3rem;
+  .checkout-form {
+    padding: 25px;
+    border: solid 1px #00000010;
+    border-radius: $radius;
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      input,
+      select,
+      textarea {
+        border: solid 1px $color-border;
+        border-radius: 5px;
+        padding: 10px 15px;
+      }
+    }
+  }
+  .order-summary {
+    padding: 25px;
+    border: solid 1px #00000010;
+    .summary-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1.1rem;
+      font-size: 1.05em;
+      &.total {
+        font-weight: 700;
+        font-size: 1.15em;
+      }
+    }
+    .btn {
+      width: 100%;
+      margin-top: 1.2rem;
+    }
+  }
+
+  .payment-methods {
+    margin-top: 2rem;
+    border: solid 1px #00000010;
+    padding: 25px;
+    .form-group {
+      margin-bottom: 1.1rem;
+    }
+    .payment-option {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      margin-bottom: 0.7rem;
+      label {
+        margin-bottom: 0;
+        font-size: 14px;
+      }
+    }
+    .btn {
+      width: 100%;
+      background-color: $primary;
+      color: #fff;
+    }
+  }
+}
+@media (max-width: 991px) {
+  .order-summary {
+    max-width: 100%;
+    margin: 2rem 0 0;
+  }
+}
+@media (max-width: 767px) {
+  .checkout {
+    padding: 1.2rem 0 2rem;
+    .checkout-form,
+    .order-summary,
+    .payment-methods {
+      padding: 1.2rem;
+    }
+  }
+}

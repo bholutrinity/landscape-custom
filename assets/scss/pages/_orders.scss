@@ -1,0 +1,65 @@
+// Orders Page Styles
+.orders {
+  @include fade-in;
+  padding: 2.5rem 0 3rem;
+  .orders-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .order-card {
+    @include card;
+    border-left: 4px solid $color-primary;
+    position: relative;
+    .order-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+      .order-id { font-weight: 600; }
+      .order-status {
+        padding: 0.3em 1em;
+        border-radius: 1em;
+        font-size: 0.98em;
+        font-weight: 600;
+        &.pending { background: $color-warning; color: #fff; }
+        &.shipped { background: $color-primary; color: #fff; }
+        &.delivered { background: $color-success; color: #fff; }
+        &.cancelled { background: $color-danger; color: #fff; }
+      }
+    }
+    .order-summary-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.7rem;
+      font-size: 1.05em;
+    }
+    .order-actions {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+      .btn { min-width: 120px; }
+    }
+    .order-details {
+      display: none;
+      margin-top: 1.2rem;
+      @include fade-in;
+      &.open { display: block; }
+      .order-products {
+        margin-bottom: 1rem;
+        .order-product {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          margin-bottom: 0.7rem;
+          .order-img { width: 48px; height: 48px; border-radius: $radius; background: $color-secondary; }
+          .order-info { .order-title { font-weight: 600; } }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .orders { padding: 1.2rem 0 2rem; }
+  .order-card { padding: 1rem; }
+}

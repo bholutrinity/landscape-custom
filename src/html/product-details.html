@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details | Crushed Limestone</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="../scss/main.css">
+</head>
+
+<body>
+  <!-- Header Navigation -->
+  <header class="main-header">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+
+        <!-- Logo -->
+        <a class="navbar-brand logo" href="index.html">Landscape</a>
+
+        <!-- Mobile Toggle -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+          aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Content -->
+        <div class="collapse navbar-collapse justify-content-between" id="mainNavbar">
+
+          <!-- Center Menu -->
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="shop.html">Shop</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="gardenDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Garden Supplies
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Plants</a></li>
+                <li><a class="dropdown-item" href="#">Tools</a></li>
+                <li><a class="dropdown-item" href="#">Fertilizers</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html">Blog</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="contactus.html">Contact Us</a>
+            </li>
+          </ul>
+
+          <!-- Right Icons -->
+          <div class="header-icons d-flex align-items-center">
+            <a href="#" class="icon-btn" aria-label="Search">
+              <i class="bi bi-search"></i>
+            </a>
+
+            <a href="wishlist.html" class="icon-btn" aria-label="Wishlist">
+              <i class="bi bi-heart"></i>
+            </a>
+
+            <a href="cart.html" class="icon-btn" aria-label="Cart">
+              <i class="bi bi-bag"></i>
+            </a>
+
+            <a href="profile.html" class="icon-btn" aria-label="Profile">
+              <i class="bi bi-person"></i>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- LOGIN MODAL -->
+  <div id="lsLoginModal" class="ls-modal-bg d-none">
+    <div class="ls-modal-card animate__animated animate__fadeIn">
+      <div class="ls-modal-title">Welcome Back to Landscape</div>
+      <p class="ls-modal-subtitle">Sign in to your Landscape account to continue</p>
+      <form class="ls-modal-form">
+        <label class="form-label" for="loginEmail">Email Address</label>
+        <input type="email" class="form-control" id="loginEmail" placeholder="john@email.com" autocomplete="username">
+        <label class="form-label" for="loginPassword">Password</label>
+        <input type="password" class="form-control" id="loginPassword" placeholder="Enter Your Password"
+          autocomplete="current-password">
+        <a href="#" class="ls-modal-link" id="lsForgotPassword">Forgot Password?</a>
+        <button type="submit" class="ls-btn-primary w-100">Sign In</button>
+      </form>
+      <div class="ls-modal-divider">OR SIGN IN WITH</div>
+      <button class="ls-btn-google w-100" type="button"><img src="https://www.svgrepo.com/show/475656/google-color.svg"
+          alt="Google" width="20" height="20">
+        Google</button>
+      <div class="ls-modal-footer">Don't have an account? <a href="#" id="lsShowSignup">Sign up for free</a></div>
+      <div class="ls-modal-terms">By signing in, you agree to our <a href="#">Terms of Service</a> and <a
+          href="#">Privacy Policy</a></div>
+    </div>
+  </div>
+
+  <!-- SIGNUP MODAL -->
+  <div id="lsSignupModal" class="ls-signup-modal-bg d-none">
+    <div class="ls-signup-modal-card animate__animated animate__fadeIn">
+      <div class="ls-signup-title">Create an Account</div>
+      <p class="discription-p">Join Landscape to start shopping premium Garden supplies</p>
+      <form class="ls-signup-form">
+        <label class="form-label" for="signupName">Full Name</label>
+        <input type="text" class="form-control" id="signupName" placeholder="John Doe" autocomplete="name">
+        <label class="form-label" for="signupEmail">Email Address</label>
+        <input type="email" class="form-control" id="signupEmail" placeholder="johndoe@gmail.com" autocomplete="email">
+        <label class="form-label" for="signupPassword">Password</label>
+        <input type="password" class="form-control" id="signupPassword" placeholder="Create Strong Password"
+          autocomplete="new-password">
+        <label class="form-label" for="signupConfirm">Confirm Password</label>
+        <input type="password" class="form-control" id="signupConfirm" placeholder="Re-enter your password"
+          autocomplete="new-password">
+        <div class="ls-signup-checkbox">
+          <input type="checkbox" id="signupTerms" required>
+          <label for="signupTerms">I agree to terms of service and privacy policy</label>
+        </div>
+        <button type="submit" class="ls-btn-primary w-100">Create Account</button>
+      </form>
+      <div class="ls-signup-divider">Or sign up with</div>
+      <button class="ls-btn-google w-100" type="button"><img src="https://www.svgrepo.com/show/475656/google-color.svg"
+          alt="Google" width="20" height="20">
+        Google</button>
+      <div class="ls-signup-footer">Already have an account? <a href="#" id="lsShowLogin">Sign In</a></div>
+      <div class="ls-signup-terms">By signing up, you agree to our <a href="#">Terms of Service</a> and <a
+          href="#">Privacy Policy</a></div>
+    </div>
+  </div>
+
+  <!-- SEARCH RESULT MODAL -->
+  <div id="lsSearchModal" class="ls-search-modal-bg d-none">
+    <div class="container">
+      <div class="ls-search-modal-container animate__animated animate__fadeIn">
+        <div class="ls-search-header">
+          <div class="titleBox">
+            <a href="#" class="back"><i class="bi bi-arrow-left"></i>back to shop</a>
+            <div class="ls-search-title">Search Results</div>
+            <p class="search-reasult-data">0 results for "crushed"</p>
+          </div>
+          <form class="searchform" style="gap:0.5rem;">
+            <input type="text" class="ls-search-input" placeholder="search products...">
+            <button type="submit" class="btn btn-light"><i class="bi bi-search"></i></button>
+          </form>
+        </div>
+        <div class="ls-search-result-box">
+          <span class="ls-search-icon"><i class="bi bi-search"></i></span>
+          <div class="ls-search-no-title">No products found</div>
+          <div class="ls-search-no-desc">We couldn't find any products matching "crushed". Try checking for
+            typos
+            or using different keywords like "rocks", "mulch", or "sand".</div>
+          <button class="ls-btn-viewall" type="button">View All Products</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main class="product-details-page">
+    <!-- Product Hero Section -->
+    <section class="product-hero-section py-4 fade-section">
+      <div class="container">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-6">
+            <div class="product-image-zoom">
+              <img src="../assets/images/product/lime.webp" alt="Crushed Limestone"
+                class="img-fluid rounded shadow-sm main-product-img" id="mainProductImg">
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <span class="badge bg-light mb-2 px-3 py-2 small fw-normal">Stone</span>
+            <h1 class="product-title h4 mb-2">Crushed Limestone</h1>
+            <div class="d-flex align-items-center mb-2">
+              <div class="star-rating me-2">
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-half text-warning"></i>
+              </div>
+              <span class="text-muted small">4.7 (87 reviews)</span>
+            </div>
+            <div class="price-box mb-2">
+              <span class="product-price h5 mb-0 me-2">$35.00</span>
+              <span class="text-decoration-line-through text-muted line-price">$48.00</span>
+            </div>
+            <p class="product-desc mb-3">Make a bold statement with our vibrant red decorative rocks. These eye-catching
+              stones have been thoroughly washed to reveal their full color potential. Ideal for creating accent areas,
+              highlighting garden beds, or adding a pop of color to your landscape design.</p>
+            <div class="d-flex align-items-center mb-3">
+              <span class="me-2">Quantity:</span>
+              <div class="quantity-selector d-inline-flex align-items-center">
+                <button class="btn btn-light btn-sm qty-btn minus" type="button"><i class="bi bi-dash"></i></button>
+                <input type="text" class="form-control form-control-sm text-center mx-1 qty-input" value="2" readonly
+                  style="width: 40px;">
+                <button class="btn btn-light btn-sm qty-btn plus" type="button"><i class="bi bi-plus"></i></button>
+              </div>
+            </div>
+            <div class="buttonBox">
+              <button class="btn btn-brown add-to-cart-btn px-4 py-2 mb-3 fw-semibold shadow-sm" type="button">
+                Add To Cart
+              </button>
+              <button class="btn btn-outline-brown  px-3 py-2 mb-3 fw-semibold shadow-sm" type="button">
+                <i class="bi bi-heart"></i>
+              </button>
+            </div>
+            <div class="row g-2 mt-2">
+              <div class="col-12 col-md-4">
+                <div class="feature-box text-center p-3 h-100">
+                  <i class="bi bi-award fs-3 text-brown mb-2"></i>
+                  <div class="fw-semibold small">Premium Quality</div>
+                </div>
+              </div>
+              <div class="col-12 col-md-4">
+                <div class="feature-box text-center p-3 h-100">
+                  <i class="bi bi-truck fs-3 text-brown mb-2"></i>
+                  <div class="fw-semibold small">Fast Delivery</div>
+                </div>
+              </div>
+              <div class="col-12 col-md-4">
+                <div class="feature-box text-center p-3 h-100">
+                  <i class="bi bi-shield-check fs-3 text-brown mb-2"></i>
+                  <div class="fw-semibold small">Quality Guarantee</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Tabs Section -->
+    <section class="product-tabs-section fade-section">
+      <div class="container">
+        <ul class="nav nav-tabs product-tabs mb-4" id="productTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="desc-tab" data-bs-toggle="tab" data-bs-target="#desc" type="button"
+              role="tab">Description</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="specs-tab" data-bs-toggle="tab" data-bs-target="#specs" type="button"
+              role="tab">Specifications</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="calc-tab" data-bs-toggle="tab" data-bs-target="#calc" type="button"
+              role="tab">Calculator</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="reviews-tab" data-bs-toggle="tab" data-bs-target="#reviews" type="button"
+              role="tab">Reviews</button>
+          </li>
+        </ul>
+        <div class="tab-content" id="productTabContent">
+          <div class="tab-pane fade show active" id="desc" role="tabpanel">
+            <!-- Product Description Section -->
+            <div class="product-description-section">
+              <div class="desc-title">Product Description</div>
+              <div class="desc-text">Make a bold statement with our vibrant red decorative rocks. These eye-catching
+                stones have been thoroughly washed to reveal their full color potential. Ideal for creating accent
+                areas, highlighting garden beds, or adding a pop of color to your landscape design.</div>
+              <ul class="key-features">
+                <li><i class="bi bi-check-circle-fill"></i> Bold red color</li>
+                <li><i class="bi bi-check-circle-fill"></i> Thoroughly washed</li>
+                <li><i class="bi bi-check-circle-fill"></i> Great for accent areas</li>
+                <li><i class="bi bi-check-circle-fill"></i> Color-fast and durable</li>
+                <li><i class="bi bi-check-circle-fill"></i> Unique landscape element</li>
+              </ul>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="specs" role="tabpanel">
+            <!-- Product Specifications Section -->
+            <div class="product-specifications-section">
+              <table class="spec-table w-100">
+                <tbody>
+                  <tr>
+                    <th>Coverage</th>
+                    <td>70 sq ft per ton at 2" depth</td>
+                  </tr>
+                  <tr>
+                    <th>Weight</th>
+                    <td>2000 lbs per ton</td>
+                  </tr>
+                  <tr>
+                    <th>Color</th>
+                    <td>Vibrant Red</td>
+                  </tr>
+                  <tr>
+                    <th>Material</th>
+                    <td>Washed Decorative Rock</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="calc" role="tabpanel">
+            <!-- Material Calculator Section -->
+            <div class="material-calculator-section">
+              <div class="calc-title mb-3">Material Calculator</div>
+              <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-12">
+                  <form class="calc-form mb-3 mb-lg-0 w-100" autocomplete="off">
+                    <div class="row g-3">
+                      <div class="col-12 ">
+                        <label class="form-label">Length</label>
+                        <input type="number" min="0" step="any" class="form-control calc-length"
+                          placeholder="Enter Length">
+                      </div>
+                      <div class="col-12 ">
+                        <label class="form-label">Width</label>
+                        <input type="number" min="0" step="any" class="form-control calc-width"
+                          placeholder="Enter Width">
+                      </div>
+                      <div class="col-12 col-md-6">
+                        <label class="form-label">Depth (inches)</label>
+                        <input type="number" min="0" step="any" class="form-control calc-depth" value="2">
+                      </div>
+                      <div class="col-12 col-md-6">
+                        <label class="form-label">Unit Of Measurement</label>
+                        <select class="form-select calc-unit">
+                          <option>Feet</option>
+                          <option>Meters</option>
+                        </select>
+                      </div>
+                      <div class="col-12 col-md-6">
+                        <button type="submit" class="btn btn-calc w-100">Calculate</button>
+                      </div>
+                      <div class="col-12 col-md-6">
+                        <button type="button" class="btn btn-reset w-100">Reset</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-12">
+                  <div class="calc-results">
+                    <div><span class="result-label">Area:</span> <span class="result-area">-</span></div>
+                    <div><span class="result-label">Volume:</span> <span class="result-volume">-</span></div>
+                    <div><span class="result-label">Material Needed:</span> <span class="result-material">-</span></div>
+                    <div><span class="result-label">Estimated Cost:</span> <span class="result-cost">-</span></div>
+                    <div class="result-note mt-2">* This is an estimate. Actual requirements may vary based on
+                      compaction
+                      and setting</div>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="reviews" role="tabpanel">
+            <!-- Reviews Section -->
+            <div class="reviews-section">
+              <div class="review-title mb-3">Write a Review</div>
+              <form class="review-form">
+                <div class="mb-3">
+                  <label class="form-label">Your Name</label>
+                  <input type="text" class="form-control" placeholder="Enter Your Name" required>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Rating</label>
+                  <div class="star-rating mb-2">
+                    <i class="bi bi-star"></i>
+                    <i class="bi bi-star"></i>
+                    <i class="bi bi-star"></i>
+                    <i class="bi bi-star"></i>
+                    <i class="bi bi-star"></i>
+                  </div>
+                  <input type="hidden" class="rating-value" name="rating" value="0">
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Your Review</label>
+                  <textarea class="form-control" rows="3" placeholder="Share your experience with this product"
+                    required></textarea>
+                </div>
+                <button type="submit" class="btn btn-submit-review">Submit Review</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (do not modify, assumed included) -->
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+
+</html>
